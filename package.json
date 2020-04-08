@@ -1,0 +1,23 @@
+{
+  "name": "minecraft-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anish-shanbhag/minecraft-api.git"
+  },
+  "author": "Anish Shanbhag <anish.shanbhag.development@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anish-shanbhag/minecraft-api/issues"
+  },
+  "homepage": "https://github.com/anish-shanbhag/minecraft-api#readme",
+  "dependencies": {
+    "apollo-server-lambda": "2.12.0",
+    "graphql": "15.0.0"
+  }
+}
