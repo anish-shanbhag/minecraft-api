@@ -25,6 +25,8 @@ const knex = require("knex")({
 const app = express();
 app.use(cors());
 
+const getParams = (req, params) => params.map(([param, defaultValue]) => req.query[param] ? req.query[param] : defaultValue);
+
 const arrayEndpoint = (tableName, req) => {
   if (req.query.page && !req.query.limit) {
     throw createError(400, "If you include the page parameter, you must also include the limit parameter.");
@@ -32,11 +34,11 @@ const arrayEndpoint = (tableName, req) => {
   const params = [
     ["limit", 1000000],
     ["page", 1],
-    ["sort", tableName.slice(0, -1) + "Id"],
+    ["sort", tableName + "." + tableName.slice(0, -1) + "Id"],
     ["order", "asc"],
     ["fields", "*"]
   ];
-  const [limit, page, sort, order, fields] = params.map(([param, defaultValue]) => req.query[param] ? req.query[param] : defaultValue);
+  const [limit, page, sort, order, fields] = getParams(req, params);
   return knex.select(fields).from(tableName).orderBy(sort, order).limit(limit).offset(limit * (page - 1));
 }
 
@@ -54,7 +56,40 @@ const getItem = async (item, fields = "*") => {
 
 app.get("/items/:item", async (req, res) => res.send(await getItem(req.params.item, req.query.fields)));
 
-app.get("/blocks", async (req, res) => res.send(await arrayEndpoint("blocks", req)));
+app.get("/blocks", async (req, res) => {
+  const query = arrayEndpoint("blocks", req);
+  if (req.query.color) {
+    if (!/^#[0-9A-F]{6}$/i.test(req.query.color)) {
+      throw createError(400, "Color parameter must be a valid hex color in the form #FFFFFF.");
+    }
+    const int = parseInt(req.query.color.slice(1), 16);
+    const red = (int >> 16) & 255;
+    const green = (int >> 8) & 255;
+    const blue = int & 255;
+    console.log(red, green, blue);
+    const [colorVariance, colorAmount] = getParams(req, [
+      ["colorVariance", 20],
+      ["colorAmount", 0.1]
+    ]);
+    query.innerJoin("blockColors", "blocks.blockId", "blockColors.blockId")
+      .whereRaw(`
+        ABS(CAST(blockColors.red AS SIGNED) - :red) + 
+        ABS(CAST(blockColors.green AS SIGNED) - :green) +
+        ABS(CAST(blockColors.blue AS SIGNED) - :blue) < :colorVariance
+        AND blockColors.amount > :colorAmount
+      `, {
+        red,
+        green,
+        blue,
+        colorVariance,
+        colorAmount
+      })
+      .groupBy("blocks.blockId");
+    query
+    console.log(colorVariance, colorAmount);
+  }
+  res.send(await query);
+});
 
 app.get("/blocks/:block", async (req, res) => {
   const block = req.params.block;
@@ -69,7 +104,7 @@ app.get("/blocks/:block", async (req, res) => {
 });
 
 app.get("/crafting-recipes", async (req, res) => {
-  let query = arrayEndpoint("craftingRecipes", req);
+  const query = arrayEndpoint("craftingRecipes", req);
   if (req.query.item) {
     query.where("itemId", (await getItem(req.query.item, "itemId")).itemId);
   }
@@ -122,14 +157,15 @@ app.get("/crafting-recipes", async (req, res) => {
 const port = process.env.PORT || 4000;
 app.listen(port, async () => {
   try {
-    const data = (await axios.get("http://localhost:4000/crafting-recipes", {
+    const data = (await axios.get("http://localhost:4000/blocks", {
       params: {
-        item: "Firework Star",
-        fields: ["itemId", "recipe"],
-        itemFields: ["name"]
+        fields: ["image", "itemId"],
+        color: "#5c491b",
+        colorVariance: 40,
+        colorAmount: 0.4
       }
     })).data;
-    console.log(data[0]);
+    console.log(data);
   } catch (e) {
     console.error("Client error: " + e);
   }
