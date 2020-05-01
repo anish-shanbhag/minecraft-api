@@ -42,7 +42,13 @@ const arrayEndpoint = (tableName, req) => {
   return knex.select(fields).from(tableName).orderBy(sort, order).limit(limit).offset(limit * (page - 1));
 }
 
-app.get("/items", async (req, res) => res.send(await arrayEndpoint("items", req)));
+app.get("/items", async (req, res) => {
+  const query = arrayEndpoint("items", req);
+  if (req.query.stackSize) {
+    query.where("stackSize", req.query.stackSize);
+  }
+  res.send(await query);
+});
 
 const getItem = async (item, fields = "*") => {
   const column = isNaN(item) ? item.toLowerCase() === item ? "namespacedId" : "name" : "itemId";
@@ -66,12 +72,12 @@ app.get("/blocks", async (req, res) => {
     const red = (int >> 16) & 255;
     const green = (int >> 8) & 255;
     const blue = int & 255;
-    console.log(red, green, blue);
     const [colorVariance, colorAmount] = getParams(req, [
       ["colorVariance", 20],
       ["colorAmount", 0.1]
     ]);
-    query.innerJoin("blockColors", "blocks.blockId", "blockColors.blockId")
+    query
+      .innerJoin("blockColors", "blocks.blockId", "blockColors.blockId")
       .whereRaw(`
         ABS(CAST(blockColors.red AS SIGNED) - :red) + 
         ABS(CAST(blockColors.green AS SIGNED) - :green) +
@@ -85,8 +91,22 @@ app.get("/blocks", async (req, res) => {
         colorAmount
       })
       .groupBy("blocks.blockId");
-    query
-    console.log(colorVariance, colorAmount);
+  }
+  const fields = ["transparent", "luminance", "blastResistance", "flammable", "tool", "requiresTool", "requiresSilkTouch"];
+  for (const field of fields) {
+    const value = req.query[field];
+    if (value) {
+      query.where(field, value === "true" || value === "false" ? (value === "true") : value);
+    }
+  }
+  const numericalFields = ["Luminance", "BlastResistance"];
+  for (const numericalField of numericalFields) {
+    if (req.query["min" + numericalField]) {
+      query.where(numericalField, ">=", req.query["min" + numericalField]);
+    }
+    if (req.query["max" + numericalField]) {
+      query.where(numericalField, "<=", req.query["max" + numericalField]);
+    }
   }
   res.send(await query);
 });
@@ -159,10 +179,10 @@ app.listen(port, async () => {
   try {
     const data = (await axios.get("http://localhost:4000/blocks", {
       params: {
-        fields: ["image", "itemId"],
-        color: "#5c491b",
-        colorVariance: 40,
-        colorAmount: 0.4
+        transparent: true,
+        minBlastResistance: 100,
+        maxBlastResistance: 5000,
+        tool: "Pickaxe"
       }
     })).data;
     console.log(data);
