@@ -2,7 +2,7 @@
   "name": "minecraft-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lambda.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/anish-shanbhag/minecraft-api#readme",
   "dependencies": {
+    "aws-serverless-express": "3.3.8",
     "axios": "0.19.2",
     "cors": "2.8.5",
     "express": "4.17.1",

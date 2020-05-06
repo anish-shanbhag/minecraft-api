@@ -1,20 +1,27 @@
 const express = require("express");
 require("express-async-errors");
+const fs = require("fs");
 const axios = require("axios");
 const cors = require("cors");
 const createError = require("http-errors");
-const config = require("./config.json");
+
 const knex = require("knex")({
   client: "mysql",
   connection: {
-    host: "localhost",
-    user: "root",
-    password: config.dbPassword,
+    ...(process.env.DB_PASSWORD ? {
+      host: "minecraft-api-database.cluster-cyznzhagsqfu.us-east-1.rds.amazonaws.com",
+      user: "admin",
+      password: process.env.DB_PASSWORD
+    } : {
+      host: "localhost",
+      user: "root",
+      password: JSON.parse(fs.readFileSync("config.json")).DEV_DB_PASSWORD
+    }),
     database: "minecraft",
     typeCast(field, next) {
       if (field.type == "TINY" && field.length == 1) {
         return (field.string() == "1");
-      } else if (field.type === "JSON") {
+      } else if (field.table === "craftingRecipes" && field.name === "recipe") {
         return JSON.parse(field.string());
       }
       return next();
@@ -114,7 +121,9 @@ app.get("/blocks", async (req, res) => {
 app.get("/blocks/:block", async (req, res) => {
   const block = req.params.block;
   const column = isNaN(block) ? block.toLowerCase() === block ? "namespacedId" : "name" : "blockId";
-  const fields = req.query.fields ? req.query.fields : "*";
+  const fields = getParams(req, [
+    ["fields", "*"]
+  ]);
   const blockObject = await knex.select(fields).from("blocks").where(column, block).first();
   if (blockObject) {
     res.send(blockObject);
@@ -123,24 +132,14 @@ app.get("/blocks/:block", async (req, res) => {
   }
 });
 
-app.get("/crafting-recipes", async (req, res) => {
-  const query = arrayEndpoint("craftingRecipes", req);
-  if (req.query.item) {
-    query.where("itemId", (await getItem(req.query.item, "itemId")).itemId);
-  }
-  if (req.query.uses) {
-    query.whereRaw("recipe REGEXP '^:itemId$|\\\\[:itemId,.+|, :itemId,|, :itemId\\\\]'", {
-      ...await getItem(req.query.uses, "itemId")
-    });
-  }
-  let recipes = await query;
-  if (req.query.itemFields) {
+async function applyItemFields(recipe, itemFields) {
+  if (itemFields) {
     const getFlattenedItem = async itemId => {
-      let item = await getItem(itemId, req.query.itemFields);
+      let item = await getItem(itemId, itemFields);
       if (Object.values(item).length === 1) return Object.values(item)[0];
       return item;
     }
-    recipes = await Promise.all(recipes.map(async ({
+    return (async ({
       craftingRecipeId,
       itemId,
       quantity,
@@ -169,24 +168,55 @@ app.get("/crafting-recipes", async (req, res) => {
         }));
       }
       return recipeObject;
-    }))
+    })(recipe);
+  } else {
+    return recipe;
   }
-  res.send(recipes);
+}
+
+app.get("/crafting-recipes", async (req, res) => {
+  const query = arrayEndpoint("craftingRecipes", req);
+  if (req.query.item) {
+    query.where("itemId", (await getItem(req.query.item, "itemId")).itemId);
+  }
+  if (req.query.uses) {
+    query.whereRaw("recipe REGEXP '^:itemId$|\\\\[:itemId,.+|, :itemId,|, :itemId\\\\]'", {
+      ...await getItem(req.query.uses, "itemId")
+    });
+  }
+  const recipes = await query;
+  res.send(await Promise.all(recipes.map(async recipe => applyItemFields(recipe, req.query.itemFields))));
 });
 
-const port = process.env.PORT || 4000;
-app.listen(port, async () => {
-  try {
-    const data = (await axios.get("http://localhost:4000/blocks", {
-      params: {
-        transparent: true,
-        minBlastResistance: 100,
-        maxBlastResistance: 5000,
-        tool: "Pickaxe"
-      }
-    })).data;
-    console.log(data);
-  } catch (e) {
-    console.error("Client error: " + e);
+app.get("/crafting-recipes/:craftingRecipeId", async (req, res) => {
+  const craftingRecipeId = req.params.craftingRecipeId;
+  const [fields] = getParams(req, [
+    ["fields", "*"]
+  ]);
+  const recipeObject = await knex.select(fields).from("craftingRecipes").where("craftingRecipeId", craftingRecipeId).first();
+  if (recipeObject) {
+    res.send(await applyItemFields(recipeObject, req.query.itemFields));
+  } else {
+    throw createError(404, "The requested crafting recipe was not found.");
   }
 });
+
+if (!process.env.DB_PASSWORD) {
+  const port = process.env.PORT || 4000;
+  app.listen(port, async () => {
+    try {
+      const data = (await axios.get("http://localhost:4000/crafting-recipes/277", {
+        params: {
+          fields: ["itemId", "recipe"],
+          itemFields: ["name", "image"]
+        }
+      })).data;
+      // console.log(data.filter(recipe => recipe.recipe.some(a => Array.isArray(a))));
+      console.log(JSON.stringify(data, null, 2));
+    } catch (e) {
+      console.error("Client error: " + e);
+    }
+  });
+}
+
+module.exports = app;
