@@ -35,14 +35,7 @@ To form requests to the API, append the path of the resource you want to the end
     "image": "https://minecraft-api.s3.amazonaws.com/items/acacia_door.png",
     "stackSize": 64
   },
-  {
-    "itemId": 4,
-    "name": "Acacia Fence",
-    "namespacedId": "acacia_fence",
-    "description": "Fences are wall blocks that cannot normally be jumped over.",
-    "image": "https://minecraft-api.s3.amazonaws.com/items/acacia_fence.png",
-    "stackSize": 64
-  }
+  ...
 ]
 ```
 
