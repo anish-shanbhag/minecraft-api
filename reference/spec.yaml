@@ -4,20 +4,18 @@ info:
   version: '1.0'
   license:
     name: MIT
-  description: |-
-    this is the description `saf`
-
-    more description
+  description: ''
   contact:
     name: Anish Shanbhag
-    email: anish.shanbhag.development@gmail.com
+    url: 'https://github.com/anish-shanbhag'
 servers:
   - url: 'https://i8xla88513.execute-api.us-east-1.amazonaws.com/latest'
 paths:
   /items:
     get:
       summary: Get Items
-      tags: []
+      tags:
+        - Endpoints
       operationId: get-items
       parameters:
         - schema:
@@ -136,7 +134,8 @@ paths:
   '/items/{item}':
     get:
       summary: Get a Specific Item
-      tags: []
+      tags:
+        - Endpoints
       responses:
         '200':
           description: OK - sent when the request was processed successfully. The body will contain the item object.
@@ -200,7 +199,8 @@ paths:
   /blocks:
     get:
       summary: Get Blocks
-      tags: []
+      tags:
+        - Endpoints
       responses:
         '200':
           description: OK - sent when the request was processed successfully. The body will contain the array of blocks.
@@ -453,7 +453,8 @@ paths:
         description: 'Can be either a `blockId`, a `name` of a block,  or a `namespacedId` of a block.'
     get:
       summary: Get a Specific Block
-      tags: []
+      tags:
+        - Endpoints
       responses:
         '200':
           description: OK - sent when the request was processed successfully. The body will contain the block object.
@@ -538,7 +539,8 @@ paths:
   /crafting-recipes:
     get:
       summary: Get Crafting Recipes
-      tags: []
+      tags:
+        - Endpoints
       responses:
         '200':
           description: OK - sent when the request was processed successfully. The body will contain the array of crafting recipes.
@@ -1101,7 +1103,8 @@ paths:
         description: The `craftingRecipeId` of a certain crafting recipe.
     get:
       summary: Get a Specific Crafting Recipe
-      tags: []
+      tags:
+        - Endpoints
       responses:
         '200':
           description: OK - sent when the request was processed successfully. The body will contain the crafting recipe object.

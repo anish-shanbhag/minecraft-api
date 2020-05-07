@@ -43,7 +43,7 @@ const arrayEndpoint = (tableName, req) => {
     ["page", 1],
     ["sort", tableName + "." + tableName.slice(0, -1) + "Id"],
     ["order", "asc"],
-    ["fields", "*"]
+    ["fields", tableName + ".*"]
   ];
   const [limit, page, sort, order, fields] = getParams(req, params);
   return knex.select(fields).from(tableName).orderBy(sort, order).limit(limit).offset(limit * (page - 1));
