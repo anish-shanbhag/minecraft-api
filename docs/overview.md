@@ -8,6 +8,8 @@ The aim of this API is to provide you with access to all sorts of information ab
 
 Currently, the root endpoint of the API is https://i8xla88513.execute-api.us-east-1.amazonaws.com/latest. A custom domain name (that would be much easier to remember than this one!) may come soon.
 
+You can find detailed information about all of the current endpoints by expanding the **Endpoints** dropdown on the left.
+
 To form requests to the API, append the path of the resource you want to the end of the root endpoint. As an example, a simple request to get information about all of the items in Minecraft would be https://i8xla88513.execute-api.us-east-1.amazonaws.com/latest/items. This request would return the following JSON:
 ```json
 [
@@ -38,8 +40,6 @@ To form requests to the API, append the path of the resource you want to the end
   ...
 ]
 ```
-
-You can find detailed information about all of the current endpoints by expanding the **Endpoints** dropdown on the left.
 
 # Try It Out!
 
