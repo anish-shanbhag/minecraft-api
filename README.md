@@ -4,6 +4,10 @@ This is the repository for the (unofficial) Minecraft API!
 
 The aim of this API is to provide you with access to all sorts of information about the game Minecraft. This includes things like images, descriptions, stats, technical details, and much more. Currently, the API has endpoints for information about items, blocks, and crafting recipes, but more is planned for the future. The API is up to date for Minecraft 1.15.2. Support for the 1.16 update will most likely come some time after its full launch.
 
+# Documentation
+
+You can find detailed documentation for the API [here](https://stoplight.io/p/docs/gh/anish-shanbhag/minecraft-api).
+
 # Endpoints
 
 Currently, the root endpoint of the API is https://i8xla88513.execute-api.us-east-1.amazonaws.com/latest. A custom domain name (that would be much easier to remember than this one!) may come soon.
@@ -38,10 +42,6 @@ To form requests to the API, append the path of the resource you want to the end
   ...
 ]
 ```
-
-# Documentation
-
-You can find detailed documentation for the API (here)[https://stoplight.io/p/docs/gh/anish-shanbhag/minecraft-api].
 
 # A Note About Development
 
