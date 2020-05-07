@@ -202,16 +202,15 @@ app.get("/crafting-recipes/:craftingRecipeId", async (req, res) => {
 });
 
 if (!process.env.DB_PASSWORD) {
+  // testing code, please ignore
   const port = process.env.PORT || 4000;
   app.listen(port, async () => {
     try {
-      const data = (await axios.get("http://localhost:4000/crafting-recipes/277", {
+      const data = (await axios.get("http://localhost:4000/items", {
         params: {
-          fields: ["itemId", "recipe"],
-          itemFields: ["name", "image"]
+          limit: 4
         }
       })).data;
-      // console.log(data.filter(recipe => recipe.recipe.some(a => Array.isArray(a))));
       console.log(JSON.stringify(data, null, 2));
     } catch (e) {
       console.error("Client error: " + e);

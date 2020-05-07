@@ -2,13 +2,49 @@
 
 This is the repository for the (unofficial) Minecraft API!
 
-The aim of this API is to provide you with access to all sorts of information about the game Minecraft. Currently, the API has endpoints for information about items, blocks, and crafting recipes, but more is planned for the future. The API is up to date for Minecraft 1.15.2. Support for the 1.16 update will most likely come some time after its full launch.
+The aim of this API is to provide you with access to all sorts of information about the game Minecraft. This includes things like images, descriptions, stats, technical details, and much more. Currently, the API has endpoints for information about items, blocks, and crafting recipes, but more is planned for the future. The API is up to date for Minecraft 1.15.2. Support for the 1.16 update will most likely come some time after its full launch.
 
 # Endpoints
 
 Currently, the root endpoint of the API is https://i8xla88513.execute-api.us-east-1.amazonaws.com/latest. A custom domain name (that would be much easier to remember than this one!) may come soon.
 
-To form requests to the API, append the path of the resource you want to the end of the root endpoint. As an example, a simple request to get information about all of the items in Minecraft would be https://i8xla88513.execute-api.us-east-1.amazonaws.com/latest/items.
+To form requests to the API, append the path of the resource you want to the end of the root endpoint. As an example, a simple request to get information about all of the items in Minecraft would be https://i8xla88513.execute-api.us-east-1.amazonaws.com/latest/items. This request would return the following JSON:
+```json
+[
+  {
+    "itemId": 1,
+    "name": "Acacia Boat",
+    "namespacedId": "acacia_boat",
+    "description": "A boat is both an item and a vehicle entity.",
+    "image": "https://minecraft-api.s3.amazonaws.com/items/acacia_boat.png",
+    "stackSize": 1
+  },
+  {
+    "itemId": 2,
+    "name": "Acacia Button",
+    "namespacedId": "acacia_button",
+    "description": "A button is a non-solid block that can provide temporary redstone power.",
+    "image": "https://minecraft-api.s3.amazonaws.com/items/acacia_button.png",
+    "stackSize": 64
+  },
+  {
+    "itemId": 3,
+    "name": "Acacia Door",
+    "namespacedId": "acacia_door",
+    "description": "A door is a block that can be used as a barrier that can be opened by hand or with redstone.",
+    "image": "https://minecraft-api.s3.amazonaws.com/items/acacia_door.png",
+    "stackSize": 64
+  },
+  {
+    "itemId": 4,
+    "name": "Acacia Fence",
+    "namespacedId": "acacia_fence",
+    "description": "Fences are wall blocks that cannot normally be jumped over.",
+    "image": "https://minecraft-api.s3.amazonaws.com/items/acacia_fence.png",
+    "stackSize": 64
+  }
+]
+```
 
 # Documentation
 
