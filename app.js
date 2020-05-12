@@ -180,7 +180,7 @@ app.get("/crafting-recipes", async (req, res) => {
     query.where("itemId", (await getItem(req.query.item, "itemId")).itemId);
   }
   if (req.query.uses) {
-    query.whereRaw("recipe REGEXP '^:itemId$|\\\\[:itemId,.+|, :itemId,|, :itemId\\\\]'", {
+    query.whereRaw("recipe REGEXP '[^0-9]:itemId[^0-9]'", {
       ...await getItem(req.query.uses, "itemId")
     });
   }
@@ -206,12 +206,13 @@ if (!process.env.DB_PASSWORD) {
   const port = process.env.PORT || 4000;
   app.listen(port, async () => {
     try {
-      const data = (await axios.get("http://localhost:4000/items", {
+      const data = (await axios.get("http://localhost:4000/crafting-recipes", {
         params: {
-          limit: 4
+          uses: "stick",
+          itemFields: "name"
         }
       })).data;
-      console.log(JSON.stringify(data, null, 2));
+      console.log(data);
     } catch (e) {
       console.error("Client error: " + e);
     }
