@@ -2,7 +2,7 @@
 
 **Welcome to the documentation for the (unofficial) Minecraft API!**
 
-The aim of this API is to provide you with access to all sorts of information about the game Minecraft. This includes things like images, descriptions, stats, technical details, and much more. Currently, the API has endpoints for information about items, blocks, and crafting recipes, but more is planned for the future. The API is up to date for Minecraft 1.15.2. Support for the 1.16 update will most likely come some time after its full launch.
+The aim of this API is to provide you with access to all sorts of information about the game Minecraft. This includes things like images, descriptions, stats, technical details, and much more. Currently, the API has endpoints for information about items, blocks, and crafting recipes, but more is planned for the future. The API is up to date for Minecraft Java Edition 1.15.2. Support for the 1.16 update will most likely come some time after its full launch.
 
 # Endpoints
 
