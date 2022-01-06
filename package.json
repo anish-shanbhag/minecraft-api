@@ -2,9 +2,10 @@
   "name": "minecraft-api",
   "version": "1.0.0",
   "description": "",
-  "main": "lambda.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "items": "nodemon scripts/items.ts",
+    "blocks": "nodemon scripts/blocks.ts",
+    "recipes": "nodemon scripts/recipes.ts"
   },
   "repository": {
     "type": "git",
@@ -25,5 +26,19 @@
     "http-errors": "1.7.3",
     "knex": "0.20.13",
     "mysql": "2.18.1"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.8",
+    "@types/sharp": "^0.29.5",
+    "chalk": "^3.0.0",
+    "get-rgba-palette": "^2.0.1",
+    "image-pixels": "^2.2.2",
+    "jimp": "^0.16.1",
+    "nodemon": "^2.0.15",
+    "p-limit": "^2.3.0",
+    "puppeteer": "^13.0.1",
+    "sharp": "^0.29.3",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
   }
 }

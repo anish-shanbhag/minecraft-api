@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2020",
+    "noImplicitAny": true,
+    "moduleResolution": "Node",
+    "sourceMap": true,
+    "baseUrl": ".",
+    "lib": ["es2020", "dom", "dom.iterable"]
+  },
+  "include": ["scripts/**/*", "api/**/*", "types/**/*"]
+}

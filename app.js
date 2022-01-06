@@ -208,7 +208,8 @@ if (!process.env.DB_PASSWORD) {
     try {
       const data = (await axios.get("http://localhost:4000/crafting-recipes", {
         params: {
-          uses: "stick",
+          uses: "Diamond",
+          limit: 3,
           itemFields: "name"
         }
       })).data;
