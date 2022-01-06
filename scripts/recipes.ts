@@ -22,16 +22,12 @@ import { sortByKey } from "./utils";
       .forEach((button: HTMLElement) => button.click())
   );
   await page.waitForFunction(
-    () =>
-      document.querySelectorAll("table[data-description='Crafting recipes']")
-        .length === 10
+    () => document.querySelectorAll("table[data-description='Crafting recipes']").length === 10
   );
   console.log("Crafting recipes loaded");
   let recipes = await page.evaluate((): CraftingRecipe[] => {
     let rows = [
-      ...document.querySelectorAll(
-        "table[data-description='Crafting recipes'] tbody tr"
-      ),
+      ...document.querySelectorAll("table[data-description='Crafting recipes'] tbody tr"),
     ];
     rows = rows.filter((row) => {
       let details = row.querySelector("td:nth-child(4)");
@@ -52,8 +48,7 @@ import { sortByKey } from "./utils";
           "Written Book",
         ].some((keyword) => row.textContent.includes(keyword)) ||
         row.textContent.includes("Any Planks or") ||
-        [...row.querySelectorAll(".invslot-large .invslot-item span")]
-          .length === 0
+        [...row.querySelectorAll(".invslot-large .invslot-item span")].length === 0
       )
         return false;
       return true;
@@ -62,31 +57,23 @@ import { sortByKey } from "./utils";
       .map((row) => {
         let quantity: number[] | number = [
           ...row.querySelectorAll(".invslot-large .invslot-item"),
-        ].map((slot: HTMLElement) =>
-          slot.innerText.length > 0 ? parseInt(slot.innerText) : 1
-        );
-        if (
-          quantity.length === 1 ||
-          quantity.every((num) => num === (quantity as number[])[0])
-        )
+        ].map((slot: HTMLElement) => (slot.innerText.length > 0 ? parseInt(slot.innerText) : 1));
+        if (quantity.length === 1 || quantity.every((num) => num === (quantity as number[])[0]))
           quantity = quantity[0];
-        let item: string[] | string = [
-          ...row.querySelectorAll(".invslot-large .inv-sprite"),
-        ].map((sprite) => sprite.getAttribute("title"));
+        let item: string[] | string = [...row.querySelectorAll(".invslot-large .inv-sprite")].map(
+          (sprite) => sprite.getAttribute("title")
+        );
         if (item.length === 1) item = item[0];
         if (item === "Empty Locator Map") item = "Empty Map";
         const recipeDetails = {
           item,
           quantity,
-          recipe: [...row.querySelectorAll(".mcui-input .invslot")].map(
-            (slot) => {
-              const items = [...slot.querySelectorAll(".invslot-item span")];
-              if (items.length === 0) return null;
-              if (items.length > 1)
-                return items.map((item) => item.getAttribute("title"));
-              return items[0].getAttribute("title");
-            }
-          ),
+          recipe: [...row.querySelectorAll(".mcui-input .invslot")].map((slot) => {
+            const items = [...slot.querySelectorAll(".invslot-item span")];
+            if (items.length === 0) return null;
+            if (items.length > 1) return items.map((item) => item.getAttribute("title"));
+            return items[0].getAttribute("title");
+          }),
           shapeless: row.querySelector(".mcui-shapeless") !== null,
           matching: row.textContent.includes("Matching"),
           any: row.textContent.includes("Any"),
@@ -94,12 +81,7 @@ import { sortByKey } from "./utils";
         const itemVariants = recipeDetails.recipe.find((recipeItem) =>
           Array.isArray(recipeItem)
         ) as string[];
-        const finalRecipeDetails = (({
-          item,
-          quantity,
-          recipe,
-          shapeless,
-        }) => ({
+        const finalRecipeDetails = (({ item, quantity, recipe, shapeless }) => ({
           item,
           quantity,
           recipe,
@@ -110,9 +92,7 @@ import { sortByKey } from "./utils";
             return finalRecipeDetails as any;
           } else {
             return itemVariants.map((itemVariant, i) => ({
-              item: Array.isArray(recipeDetails.item)
-                ? recipeDetails.item[i]
-                : recipeDetails.item,
+              item: Array.isArray(recipeDetails.item) ? recipeDetails.item[i] : recipeDetails.item,
               quantity: Array.isArray(recipeDetails.quantity)
                 ? recipeDetails.quantity[i]
                 : recipeDetails.quantity,
@@ -246,17 +226,7 @@ import { sortByKey } from "./utils";
       },
       {
         name: "Sword",
-        recipe: [
-          null,
-          material.item,
-          null,
-          null,
-          material.item,
-          null,
-          null,
-          "Stick",
-          null,
-        ],
+        recipe: [null, material.item, null, null, material.item, null, null, "Stick", null],
       },
       {
         name: "Axe",
@@ -274,31 +244,11 @@ import { sortByKey } from "./utils";
       },
       {
         name: "Shovel",
-        recipe: [
-          null,
-          material.item,
-          null,
-          null,
-          "Stick",
-          null,
-          null,
-          "Stick",
-          null,
-        ],
+        recipe: [null, material.item, null, null, "Stick", null, null, "Stick", null],
       },
       {
         name: "Hoe",
-        recipe: [
-          material.item,
-          material.item,
-          null,
-          null,
-          "Stick",
-          null,
-          null,
-          "Stick",
-          null,
-        ],
+        recipe: [material.item, material.item, null, null, "Stick", null, null, "Stick", null],
       },
     ];
     for (const tool of tools) {
@@ -405,9 +355,7 @@ import { sortByKey } from "./utils";
         "Arrow",
         "Arrow",
         "Arrow",
-        effect === "Splashing"
-          ? "Lingering Water Bottle"
-          : "Lingering Potion of " + effect,
+        effect === "Splashing" ? "Lingering Water Bottle" : "Lingering Potion of " + effect,
         "Arrow",
         "Arrow",
         "Arrow",
@@ -421,11 +369,7 @@ import { sortByKey } from "./utils";
     recipes.push({
       item: "Written Book",
       quantity: i,
-      recipe: [
-        "Written Book",
-        ...Array(i).fill("Book and Quill"),
-        ...Array(8 - i).fill(null),
-      ],
+      recipe: ["Written Book", ...Array(i).fill("Book and Quill"), ...Array(8 - i).fill(null)],
       shapeless: true,
     });
   }
@@ -465,13 +409,11 @@ import { sortByKey } from "./utils";
       }
     });
   });
-  recipes = [...new Set(recipes.map((recipe) => JSON.stringify(recipe)))].map(
-    (recipe) => JSON.parse(recipe)
+  recipes = [...new Set(recipes.map((recipe) => JSON.stringify(recipe)))].map((recipe) =>
+    JSON.parse(recipe)
   );
   sortByKey(recipes, "item");
   fs.writeFileSync("./data/recipes.json", JSON.stringify(recipes, null, 2));
   console.log(invalidItems);
-  console.log(
-    chalk.blue("Done writing recipes. The items that were left out are above.")
-  );
+  console.log(chalk.blue("Done writing recipes. The items that were left out are above."));
 })();

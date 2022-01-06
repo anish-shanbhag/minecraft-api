@@ -5,7 +5,8 @@
   "scripts": {
     "items": "nodemon scripts/items.ts",
     "blocks": "nodemon scripts/blocks.ts",
-    "recipes": "nodemon scripts/recipes.ts"
+    "recipes": "nodemon scripts/recipes.ts",
+    "prettier": "prettier . -w"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
     "jimp": "^0.16.1",
     "nodemon": "^2.0.15",
     "p-limit": "^2.3.0",
+    "prettier": "^2.5.1",
     "puppeteer": "^13.0.1",
     "sharp": "^0.29.3",
     "ts-node": "^10.4.0",

@@ -18,17 +18,7 @@
   {
     "item": "Acacia Button",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Acacia Planks",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Acacia Planks", null, null, null, null],
     "shapeless": false
   },
   {
@@ -66,33 +56,13 @@
   {
     "item": "Acacia Planks",
     "quantity": 4,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Acacia Log",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Acacia Log", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Acacia Pressure Plate",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Acacia Planks",
-      "Acacia Planks",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Acacia Planks", "Acacia Planks", null, null, null, null],
     "shapeless": false
   },
   {
@@ -178,33 +148,13 @@
   {
     "item": "Andesite",
     "quantity": 2,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Diorite",
-      "Cobblestone",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Diorite", "Cobblestone", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Andesite Slab",
     "quantity": 6,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      "Andesite",
-      "Andesite",
-      "Andesite"
-    ],
+    "recipe": [null, null, null, null, null, null, "Andesite", "Andesite", "Andesite"],
     "shapeless": false
   },
   {
@@ -226,17 +176,7 @@
   {
     "item": "Arrow",
     "quantity": 4,
-    "recipe": [
-      null,
-      "Flint",
-      null,
-      null,
-      "Stick",
-      null,
-      null,
-      "Feather",
-      null
-    ],
+    "recipe": [null, "Flint", null, null, "Stick", null, null, "Feather", null],
     "shapeless": false
   },
   {
@@ -562,17 +502,7 @@
   {
     "item": "Birch Button",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Birch Planks",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Birch Planks", null, null, null, null],
     "shapeless": false
   },
   {
@@ -610,49 +540,19 @@
   {
     "item": "Birch Planks",
     "quantity": 4,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Birch Log",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Birch Log", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Birch Pressure Plate",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Birch Planks",
-      "Birch Planks",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Birch Planks", "Birch Planks", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Birch Slab",
     "quantity": 6,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      "Birch Planks",
-      "Birch Planks",
-      "Birch Planks"
-    ],
+    "recipe": [null, null, null, null, null, null, "Birch Planks", "Birch Planks", "Birch Planks"],
     "shapeless": false
   },
   {
@@ -690,17 +590,7 @@
   {
     "item": "Birch Wood",
     "quantity": 3,
-    "recipe": [
-      "Birch Log",
-      "Birch Log",
-      null,
-      "Birch Log",
-      "Birch Log",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": ["Birch Log", "Birch Log", null, "Birch Log", "Birch Log", null, null, null, null],
     "shapeless": false
   },
   {
@@ -765,49 +655,19 @@
   {
     "item": "Black Concrete Powder",
     "quantity": 8,
-    "recipe": [
-      "Black Dye",
-      "Sand",
-      "Sand",
-      "Sand",
-      "Sand",
-      "Gravel",
-      "Gravel",
-      "Gravel",
-      "Gravel"
-    ],
+    "recipe": ["Black Dye", "Sand", "Sand", "Sand", "Sand", "Gravel", "Gravel", "Gravel", "Gravel"],
     "shapeless": true
   },
   {
     "item": "Black Dye",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Ink Sac",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Ink Sac", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Black Dye",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Wither Rose",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Wither Rose", null, null, null, null],
     "shapeless": false
   },
   {
@@ -846,17 +706,7 @@
   {
     "item": "Black Stained Glass",
     "quantity": 8,
-    "recipe": [
-      "Glass",
-      "Glass",
-      "Glass",
-      "Glass",
-      "Black Dye",
-      "Glass",
-      "Glass",
-      "Glass",
-      "Glass"
-    ],
+    "recipe": ["Glass", "Glass", "Glass", "Glass", "Black Dye", "Glass", "Glass", "Glass", "Glass"],
     "shapeless": false
   },
   {
@@ -878,33 +728,13 @@
   {
     "item": "Black Wool",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "White Wool",
-      "Black Dye",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "White Wool", "Black Dye", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Blackstone Slab",
     "quantity": 6,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      "Blackstone",
-      "Blackstone",
-      "Blackstone"
-    ],
+    "recipe": [null, null, null, null, null, null, "Blackstone", "Blackstone", "Blackstone"],
     "shapeless": false
   },
   {
@@ -926,17 +756,7 @@
   {
     "item": "Blaze Powder",
     "quantity": 2,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Blaze Rod",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Blaze Rod", null, null, null, null],
     "shapeless": false
   },
   {
@@ -958,17 +778,7 @@
   {
     "item": "Block of Coal",
     "quantity": 1,
-    "recipe": [
-      "Coal",
-      "Coal",
-      "Coal",
-      "Coal",
-      "Coal",
-      "Coal",
-      "Coal",
-      "Coal",
-      "Coal"
-    ],
+    "recipe": ["Coal", "Coal", "Coal", "Coal", "Coal", "Coal", "Coal", "Coal", "Coal"],
     "shapeless": false
   },
   {
@@ -1209,49 +1019,19 @@
   {
     "item": "Blue Concrete Powder",
     "quantity": 8,
-    "recipe": [
-      "Blue Dye",
-      "Sand",
-      "Sand",
-      "Sand",
-      "Sand",
-      "Gravel",
-      "Gravel",
-      "Gravel",
-      "Gravel"
-    ],
+    "recipe": ["Blue Dye", "Sand", "Sand", "Sand", "Sand", "Gravel", "Gravel", "Gravel", "Gravel"],
     "shapeless": true
   },
   {
     "item": "Blue Dye",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Lapis Lazuli",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Lapis Lazuli", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Blue Dye",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Cornflower",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Cornflower", null, null, null, null],
     "shapeless": false
   },
   {
@@ -1306,17 +1086,7 @@
   {
     "item": "Blue Stained Glass",
     "quantity": 8,
-    "recipe": [
-      "Glass",
-      "Glass",
-      "Glass",
-      "Glass",
-      "Blue Dye",
-      "Glass",
-      "Glass",
-      "Glass",
-      "Glass"
-    ],
+    "recipe": ["Glass", "Glass", "Glass", "Glass", "Blue Dye", "Glass", "Glass", "Glass", "Glass"],
     "shapeless": false
   },
   {
@@ -1338,17 +1108,7 @@
   {
     "item": "Blue Wool",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "White Wool",
-      "Blue Dye",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "White Wool", "Blue Dye", null, null, null, null],
     "shapeless": true
   },
   {
@@ -1370,65 +1130,25 @@
   {
     "item": "Bone Meal",
     "quantity": 3,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Bone",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Bone", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Bone Meal",
     "quantity": 9,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Bone Block",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Bone Block", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Book",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Paper",
-      "Paper",
-      null,
-      "Paper",
-      "Leather",
-      null
-    ],
+    "recipe": [null, null, null, "Paper", "Paper", null, "Paper", "Leather", null],
     "shapeless": true
   },
   {
     "item": "Book and Quill",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Book",
-      "Ink Sac",
-      null,
-      null,
-      "Feather",
-      null
-    ],
+    "recipe": [null, null, null, "Book", "Ink Sac", null, null, "Feather", null],
     "shapeless": true
   },
   {
@@ -1504,33 +1224,13 @@
   {
     "item": "Bow",
     "quantity": 1,
-    "recipe": [
-      null,
-      "Stick",
-      "String",
-      "Stick",
-      null,
-      "String",
-      null,
-      "Stick",
-      "String"
-    ],
+    "recipe": [null, "Stick", "String", "Stick", null, "String", null, "Stick", "String"],
     "shapeless": false
   },
   {
     "item": "Bow",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Bow",
-      "Bow",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Bow", "Bow", null, null, null, null],
     "shapeless": true
   },
   {
@@ -1579,17 +1279,7 @@
   {
     "item": "Bread",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Wheat",
-      "Wheat",
-      "Wheat",
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Wheat", "Wheat", "Wheat", null, null, null],
     "shapeless": false
   },
   {
@@ -1602,70 +1292,28 @@
       null,
       "Blaze Rod",
       null,
-      [
-        "Cobblestone",
-        "Blackstone",
-        "Cobbled Deepslate"
-      ],
-      [
-        "Cobblestone",
-        "Blackstone",
-        "Cobbled Deepslate"
-      ],
-      [
-        "Cobblestone",
-        "Blackstone",
-        "Cobbled Deepslate"
-      ]
+      ["Cobblestone", "Blackstone", "Cobbled Deepslate"],
+      ["Cobblestone", "Blackstone", "Cobbled Deepslate"],
+      ["Cobblestone", "Blackstone", "Cobbled Deepslate"]
     ],
     "shapeless": false
   },
   {
     "item": "Brick Slab",
     "quantity": 6,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      "Bricks",
-      "Bricks",
-      "Bricks"
-    ],
+    "recipe": [null, null, null, null, null, null, "Bricks", "Bricks", "Bricks"],
     "shapeless": false
   },
   {
     "item": "Brick Stairs",
     "quantity": 4,
-    "recipe": [
-      "Bricks",
-      null,
-      null,
-      "Bricks",
-      "Bricks",
-      null,
-      "Bricks",
-      "Bricks",
-      "Bricks"
-    ],
+    "recipe": ["Bricks", null, null, "Bricks", "Bricks", null, "Bricks", "Bricks", "Bricks"],
     "shapeless": false
   },
   {
     "item": "Bricks",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Brick",
-      "Brick",
-      null,
-      "Brick",
-      "Brick",
-      null
-    ],
+    "recipe": [null, null, null, "Brick", "Brick", null, "Brick", "Brick", null],
     "shapeless": false
   },
   {
@@ -1730,33 +1378,13 @@
   {
     "item": "Brown Concrete Powder",
     "quantity": 8,
-    "recipe": [
-      "Brown Dye",
-      "Sand",
-      "Sand",
-      "Sand",
-      "Sand",
-      "Gravel",
-      "Gravel",
-      "Gravel",
-      "Gravel"
-    ],
+    "recipe": ["Brown Dye", "Sand", "Sand", "Sand", "Sand", "Gravel", "Gravel", "Gravel", "Gravel"],
     "shapeless": true
   },
   {
     "item": "Brown Dye",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Cocoa Beans",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Cocoa Beans", null, null, null, null],
     "shapeless": false
   },
   {
@@ -1795,17 +1423,7 @@
   {
     "item": "Brown Stained Glass",
     "quantity": 8,
-    "recipe": [
-      "Glass",
-      "Glass",
-      "Glass",
-      "Glass",
-      "Brown Dye",
-      "Glass",
-      "Glass",
-      "Glass",
-      "Glass"
-    ],
+    "recipe": ["Glass", "Glass", "Glass", "Glass", "Brown Dye", "Glass", "Glass", "Glass", "Glass"],
     "shapeless": false
   },
   {
@@ -1827,33 +1445,13 @@
   {
     "item": "Brown Wool",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "White Wool",
-      "Brown Dye",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "White Wool", "Brown Dye", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Bucket",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Iron Ingot",
-      null,
-      "Iron Ingot",
-      null,
-      "Iron Ingot",
-      null
-    ],
+    "recipe": [null, null, null, "Iron Ingot", null, "Iron Ingot", null, "Iron Ingot", null],
     "shapeless": false
   },
   {
@@ -1891,33 +1489,13 @@
   {
     "item": "Carrot on a Stick",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Fishing Rod",
-      null,
-      null,
-      null,
-      "Carrot"
-    ],
+    "recipe": [null, null, null, null, "Fishing Rod", null, null, null, "Carrot"],
     "shapeless": false
   },
   {
     "item": "Carrot on a Stick",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Carrot on a Stick",
-      "Carrot on a Stick",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Carrot on a Stick", "Carrot on a Stick", null, null, null, null],
     "shapeless": true
   },
   {
@@ -1939,33 +1517,13 @@
   {
     "item": "Chain",
     "quantity": 1,
-    "recipe": [
-      null,
-      "Iron Nugget",
-      null,
-      null,
-      "Iron Ingot",
-      null,
-      null,
-      "Iron Nugget",
-      null
-    ],
+    "recipe": [null, "Iron Nugget", null, null, "Iron Ingot", null, null, "Iron Nugget", null],
     "shapeless": false
   },
   {
     "item": "Chainmail Boots",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Chainmail Boots",
-      "Chainmail Boots",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Chainmail Boots", "Chainmail Boots", null, null, null, null],
     "shapeless": true
   },
   {
@@ -1987,17 +1545,7 @@
   {
     "item": "Chainmail Helmet",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Chainmail Helmet",
-      "Chainmail Helmet",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Chainmail Helmet", "Chainmail Helmet", null, null, null, null],
     "shapeless": true
   },
   {
@@ -2035,17 +1583,7 @@
   {
     "item": "Chiseled Nether Bricks",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Nether Brick Slab",
-      null,
-      null,
-      "Nether Brick Slab",
-      null
-    ],
+    "recipe": [null, null, null, null, "Nether Brick Slab", null, null, "Nether Brick Slab", null],
     "shapeless": false
   },
   {
@@ -2067,17 +1605,7 @@
   {
     "item": "Chiseled Quartz Block",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Quartz Slab",
-      null,
-      null,
-      "Quartz Slab",
-      null
-    ],
+    "recipe": [null, null, null, null, "Quartz Slab", null, null, "Quartz Slab", null],
     "shapeless": false
   },
   {
@@ -2099,81 +1627,31 @@
   {
     "item": "Chiseled Sandstone",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Sandstone Slab",
-      null,
-      null,
-      "Sandstone Slab",
-      null
-    ],
+    "recipe": [null, null, null, null, "Sandstone Slab", null, null, "Sandstone Slab", null],
     "shapeless": false
   },
   {
     "item": "Chiseled Stone Bricks",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Stone Brick Slab",
-      null,
-      null,
-      "Stone Brick Slab",
-      null
-    ],
+    "recipe": [null, null, null, null, "Stone Brick Slab", null, null, "Stone Brick Slab", null],
     "shapeless": false
   },
   {
     "item": "Clay",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Clay Ball",
-      "Clay Ball",
-      null,
-      "Clay Ball",
-      "Clay Ball",
-      null
-    ],
+    "recipe": [null, null, null, "Clay Ball", "Clay Ball", null, "Clay Ball", "Clay Ball", null],
     "shapeless": false
   },
   {
     "item": "Coal",
     "quantity": 9,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Block of Coal",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Block of Coal", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Coarse Dirt",
     "quantity": 4,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Dirt",
-      "Gravel",
-      null,
-      "Gravel",
-      "Dirt",
-      null
-    ],
+    "recipe": [null, null, null, "Dirt", "Gravel", null, "Gravel", "Dirt", null],
     "shapeless": false
   },
   {
@@ -2211,17 +1689,7 @@
   {
     "item": "Cobblestone Slab",
     "quantity": 6,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      "Cobblestone",
-      "Cobblestone",
-      "Cobblestone"
-    ],
+    "recipe": [null, null, null, null, null, null, "Cobblestone", "Cobblestone", "Cobblestone"],
     "shapeless": false
   },
   {
@@ -2338,65 +1806,25 @@
   {
     "item": "Cookie",
     "quantity": 8,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Wheat",
-      "Cocoa Beans",
-      "Wheat",
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Wheat", "Cocoa Beans", "Wheat", null, null, null],
     "shapeless": false
   },
   {
     "item": "Copper Ingot",
     "quantity": 9,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Block of Copper",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Block of Copper", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Copper Ingot",
     "quantity": 9,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Waxed Block of Copper",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Waxed Block of Copper", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Crimson Button",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Crimson Planks",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Crimson Planks", null, null, null, null],
     "shapeless": false
   },
   {
@@ -2450,33 +1878,13 @@
   {
     "item": "Crimson Planks",
     "quantity": 4,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Crimson Stem",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Crimson Stem", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Crimson Pressure Plate",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Crimson Planks",
-      "Crimson Planks",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Crimson Planks", "Crimson Planks", null, null, null, null],
     "shapeless": false
   },
   {
@@ -2550,16 +1958,8 @@
       null,
       null,
       null,
-      [
-        "Crossbow",
-        "Crossbow",
-        "Crossbow"
-      ],
-      [
-        "Crossbow",
-        "Crossbow",
-        "Crossbow"
-      ],
+      ["Crossbow", "Crossbow", "Crossbow"],
+      ["Crossbow", "Crossbow", "Crossbow"],
       null,
       null,
       null,
@@ -2586,17 +1986,7 @@
   {
     "item": "Cut Copper Slab",
     "quantity": 6,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      "Cut Copper",
-      "Cut Copper",
-      "Cut Copper"
-    ],
+    "recipe": [null, null, null, null, null, null, "Cut Copper", "Cut Copper", "Cut Copper"],
     "shapeless": false
   },
   {
@@ -2650,17 +2040,7 @@
   {
     "item": "Cut Sandstone",
     "quantity": 4,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Sandstone",
-      "Sandstone",
-      null,
-      "Sandstone",
-      "Sandstone",
-      null
-    ],
+    "recipe": [null, null, null, "Sandstone", "Sandstone", null, "Sandstone", "Sandstone", null],
     "shapeless": false
   },
   {
@@ -2741,33 +2121,13 @@
   {
     "item": "Cyan Concrete Powder",
     "quantity": 8,
-    "recipe": [
-      "Cyan Dye",
-      "Sand",
-      "Sand",
-      "Sand",
-      "Sand",
-      "Gravel",
-      "Gravel",
-      "Gravel",
-      "Gravel"
-    ],
+    "recipe": ["Cyan Dye", "Sand", "Sand", "Sand", "Sand", "Gravel", "Gravel", "Gravel", "Gravel"],
     "shapeless": true
   },
   {
     "item": "Cyan Dye",
     "quantity": 2,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Blue Dye",
-      "Green Dye",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Blue Dye", "Green Dye", null, null, null, null],
     "shapeless": true
   },
   {
@@ -2806,17 +2166,7 @@
   {
     "item": "Cyan Stained Glass",
     "quantity": 8,
-    "recipe": [
-      "Glass",
-      "Glass",
-      "Glass",
-      "Glass",
-      "Cyan Dye",
-      "Glass",
-      "Glass",
-      "Glass",
-      "Glass"
-    ],
+    "recipe": ["Glass", "Glass", "Glass", "Glass", "Cyan Dye", "Glass", "Glass", "Glass", "Glass"],
     "shapeless": false
   },
   {
@@ -2838,17 +2188,7 @@
   {
     "item": "Cyan Wool",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "White Wool",
-      "Cyan Dye",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "White Wool", "Cyan Dye", null, null, null, null],
     "shapeless": true
   },
   {
@@ -2870,17 +2210,7 @@
   {
     "item": "Dark Oak Button",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Dark Oak Planks",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Dark Oak Planks", null, null, null, null],
     "shapeless": false
   },
   {
@@ -2918,33 +2248,13 @@
   {
     "item": "Dark Oak Planks",
     "quantity": 4,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Dark Oak Log",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Dark Oak Log", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Dark Oak Pressure Plate",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Dark Oak Planks",
-      "Dark Oak Planks",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Dark Oak Planks", "Dark Oak Planks", null, null, null, null],
     "shapeless": false
   },
   {
@@ -3169,81 +2479,31 @@
   {
     "item": "Diamond",
     "quantity": 9,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Block of Diamond",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Block of Diamond", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Diamond Axe",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Diamond Axe",
-      "Diamond Axe",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Diamond Axe", "Diamond Axe", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Diamond Axe",
     "quantity": 1,
-    "recipe": [
-      "Diamond",
-      "Diamond",
-      null,
-      "Diamond",
-      "Stick",
-      null,
-      null,
-      "Stick",
-      null
-    ],
+    "recipe": ["Diamond", "Diamond", null, "Diamond", "Stick", null, null, "Stick", null],
     "shapeless": false
   },
   {
     "item": "Diamond Boots",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Diamond",
-      null,
-      "Diamond",
-      "Diamond",
-      null,
-      "Diamond"
-    ],
+    "recipe": [null, null, null, "Diamond", null, "Diamond", "Diamond", null, "Diamond"],
     "shapeless": false
   },
   {
     "item": "Diamond Boots",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Diamond Boots",
-      "Diamond Boots",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Diamond Boots", "Diamond Boots", null, null, null, null],
     "shapeless": true
   },
   {
@@ -3281,65 +2541,25 @@
   {
     "item": "Diamond Helmet",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Diamond",
-      "Diamond",
-      "Diamond",
-      "Diamond",
-      null,
-      "Diamond"
-    ],
+    "recipe": [null, null, null, "Diamond", "Diamond", "Diamond", "Diamond", null, "Diamond"],
     "shapeless": false
   },
   {
     "item": "Diamond Helmet",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Diamond Helmet",
-      "Diamond Helmet",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Diamond Helmet", "Diamond Helmet", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Diamond Hoe",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Diamond Hoe",
-      "Diamond Hoe",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Diamond Hoe", "Diamond Hoe", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Diamond Hoe",
     "quantity": 1,
-    "recipe": [
-      "Diamond",
-      "Diamond",
-      null,
-      null,
-      "Stick",
-      null,
-      null,
-      "Stick",
-      null
-    ],
+    "recipe": ["Diamond", "Diamond", null, null, "Stick", null, null, "Stick", null],
     "shapeless": false
   },
   {
@@ -3361,113 +2581,43 @@
   {
     "item": "Diamond Leggings",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Diamond Leggings",
-      "Diamond Leggings",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Diamond Leggings", "Diamond Leggings", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Diamond Pickaxe",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Diamond Pickaxe",
-      "Diamond Pickaxe",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Diamond Pickaxe", "Diamond Pickaxe", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Diamond Pickaxe",
     "quantity": 1,
-    "recipe": [
-      "Diamond",
-      "Diamond",
-      "Diamond",
-      null,
-      "Stick",
-      null,
-      null,
-      "Stick",
-      null
-    ],
+    "recipe": ["Diamond", "Diamond", "Diamond", null, "Stick", null, null, "Stick", null],
     "shapeless": false
   },
   {
     "item": "Diamond Shovel",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Diamond Shovel",
-      "Diamond Shovel",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Diamond Shovel", "Diamond Shovel", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Diamond Shovel",
     "quantity": 1,
-    "recipe": [
-      null,
-      "Diamond",
-      null,
-      null,
-      "Stick",
-      null,
-      null,
-      "Stick",
-      null
-    ],
+    "recipe": [null, "Diamond", null, null, "Stick", null, null, "Stick", null],
     "shapeless": false
   },
   {
     "item": "Diamond Sword",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Diamond Sword",
-      "Diamond Sword",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Diamond Sword", "Diamond Sword", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Diamond Sword",
     "quantity": 1,
-    "recipe": [
-      null,
-      "Diamond",
-      null,
-      null,
-      "Diamond",
-      null,
-      null,
-      "Stick",
-      null
-    ],
+    "recipe": [null, "Diamond", null, null, "Diamond", null, null, "Stick", null],
     "shapeless": false
   },
   {
@@ -3489,33 +2639,13 @@
   {
     "item": "Diorite Slab",
     "quantity": 6,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      "Diorite",
-      "Diorite",
-      "Diorite"
-    ],
+    "recipe": [null, null, null, null, null, null, "Diorite", "Diorite", "Diorite"],
     "shapeless": false
   },
   {
     "item": "Diorite Stairs",
     "quantity": 4,
-    "recipe": [
-      "Diorite",
-      null,
-      null,
-      "Diorite",
-      "Diorite",
-      null,
-      "Diorite",
-      "Diorite",
-      "Diorite"
-    ],
+    "recipe": ["Diorite", null, null, "Diorite", "Diorite", null, "Diorite", "Diorite", "Diorite"],
     "shapeless": false
   },
   {
@@ -3537,17 +2667,7 @@
   {
     "item": "Dried Kelp",
     "quantity": 9,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Dried Kelp Block",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Dried Kelp Block", null, null, null, null],
     "shapeless": false
   },
   {
@@ -3601,33 +2721,13 @@
   {
     "item": "Emerald",
     "quantity": 9,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Block of Emerald",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Block of Emerald", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Empty Map",
     "quantity": 1,
-    "recipe": [
-      "Paper",
-      "Paper",
-      "Paper",
-      "Paper",
-      null,
-      "Paper",
-      "Paper",
-      "Paper",
-      "Paper"
-    ],
+    "recipe": ["Paper", "Paper", "Paper", "Paper", null, "Paper", "Paper", "Paper", "Paper"],
     "shapeless": false
   },
   {
@@ -3665,17 +2765,7 @@
   {
     "item": "End Stone Bricks",
     "quantity": 4,
-    "recipe": [
-      "End Stone",
-      "End Stone",
-      null,
-      "End Stone",
-      "End Stone",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": ["End Stone", "End Stone", null, "End Stone", "End Stone", null, null, null, null],
     "shapeless": false
   },
   {
@@ -3729,65 +2819,25 @@
   {
     "item": "Eye of Ender",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Blaze Powder",
-      "Ender Pearl",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Blaze Powder", "Ender Pearl", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Fermented Spider Eye",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Brown Mushroom",
-      "Sugar",
-      null,
-      null,
-      "Spider Eye",
-      null
-    ],
+    "recipe": [null, null, null, "Brown Mushroom", "Sugar", null, null, "Spider Eye", null],
     "shapeless": true
   },
   {
     "item": "Fire Charge",
     "quantity": 3,
-    "recipe": [
-      null,
-      "Blaze Powder",
-      null,
-      null,
-      "Coal",
-      null,
-      null,
-      "Gunpowder",
-      null
-    ],
+    "recipe": [null, "Blaze Powder", null, null, "Coal", null, null, "Gunpowder", null],
     "shapeless": false
   },
   {
     "item": "Fire Charge",
     "quantity": 3,
-    "recipe": [
-      null,
-      "Blaze Powder",
-      null,
-      null,
-      "Charcoal",
-      null,
-      null,
-      "Gunpowder",
-      null
-    ],
+    "recipe": [null, "Blaze Powder", null, null, "Charcoal", null, null, "Gunpowder", null],
     "shapeless": false
   },
   {
@@ -3799,14 +2849,8 @@
       null,
       "Paper",
       "Gunpowder",
-      [
-        null,
-        "Gunpowder"
-      ],
-      [
-        null,
-        "Gunpowder"
-      ],
+      [null, "Gunpowder"],
+      [null, "Gunpowder"],
       null,
       null
     ],
@@ -3822,14 +2866,8 @@
       "Firework Star",
       "Paper",
       "Gunpowder",
-      [
-        null,
-        "Gunpowder"
-      ],
-      [
-        null,
-        "Gunpowder"
-      ],
+      [null, "Gunpowder"],
+      [null, "Gunpowder"],
       null
     ],
     "shapeless": true
@@ -4040,81 +3078,31 @@
   {
     "item": "Fishing Rod",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      "Stick",
-      null,
-      "Stick",
-      "String",
-      "Stick",
-      null,
-      "String"
-    ],
+    "recipe": [null, null, "Stick", null, "Stick", "String", "Stick", null, "String"],
     "shapeless": false
   },
   {
     "item": "Fishing Rod",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Fishing Rod",
-      "Fishing Rod",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Fishing Rod", "Fishing Rod", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Flint and Steel",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Iron Ingot",
-      "Flint",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Iron Ingot", "Flint", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Flint and Steel",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Flint and Steel",
-      "Flint and Steel",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Flint and Steel", "Flint and Steel", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Glass Bottle",
     "quantity": 3,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Glass",
-      null,
-      "Glass",
-      null,
-      "Glass",
-      null
-    ],
+    "recipe": [null, null, null, "Glass", null, "Glass", null, "Glass", null],
     "shapeless": false
   },
   {
@@ -4152,17 +3140,7 @@
   {
     "item": "Gold Ingot",
     "quantity": 9,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Block of Gold",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Block of Gold", null, null, null, null],
     "shapeless": false
   },
   {
@@ -4184,17 +3162,7 @@
   {
     "item": "Gold Nugget",
     "quantity": 9,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Gold Ingot",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Gold Ingot", null, null, null, null],
     "shapeless": false
   },
   {
@@ -4216,33 +3184,13 @@
   {
     "item": "Golden Axe",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Golden Axe",
-      "Golden Axe",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Golden Axe", "Golden Axe", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Golden Axe",
     "quantity": 1,
-    "recipe": [
-      "Gold Ingot",
-      "Gold Ingot",
-      null,
-      "Gold Ingot",
-      "Stick",
-      null,
-      null,
-      "Stick",
-      null
-    ],
+    "recipe": ["Gold Ingot", "Gold Ingot", null, "Gold Ingot", "Stick", null, null, "Stick", null],
     "shapeless": false
   },
   {
@@ -4264,17 +3212,7 @@
   {
     "item": "Golden Boots",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Golden Boots",
-      "Golden Boots",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Golden Boots", "Golden Boots", null, null, null, null],
     "shapeless": true
   },
   {
@@ -4312,17 +3250,7 @@
   {
     "item": "Golden Chestplate",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Golden Chestplate",
-      "Golden Chestplate",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Golden Chestplate", "Golden Chestplate", null, null, null, null],
     "shapeless": true
   },
   {
@@ -4344,49 +3272,19 @@
   {
     "item": "Golden Helmet",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Golden Helmet",
-      "Golden Helmet",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Golden Helmet", "Golden Helmet", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Golden Hoe",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Golden Hoe",
-      "Golden Hoe",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Golden Hoe", "Golden Hoe", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Golden Hoe",
     "quantity": 1,
-    "recipe": [
-      "Gold Ingot",
-      "Gold Ingot",
-      null,
-      null,
-      "Stick",
-      null,
-      null,
-      "Stick",
-      null
-    ],
+    "recipe": ["Gold Ingot", "Gold Ingot", null, null, "Stick", null, null, "Stick", null],
     "shapeless": false
   },
   {
@@ -4408,161 +3306,61 @@
   {
     "item": "Golden Leggings",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Golden Leggings",
-      "Golden Leggings",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Golden Leggings", "Golden Leggings", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Golden Pickaxe",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Golden Pickaxe",
-      "Golden Pickaxe",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Golden Pickaxe", "Golden Pickaxe", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Golden Pickaxe",
     "quantity": 1,
-    "recipe": [
-      "Gold Ingot",
-      "Gold Ingot",
-      "Gold Ingot",
-      null,
-      "Stick",
-      null,
-      null,
-      "Stick",
-      null
-    ],
+    "recipe": ["Gold Ingot", "Gold Ingot", "Gold Ingot", null, "Stick", null, null, "Stick", null],
     "shapeless": false
   },
   {
     "item": "Golden Shovel",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Golden Shovel",
-      "Golden Shovel",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Golden Shovel", "Golden Shovel", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Golden Shovel",
     "quantity": 1,
-    "recipe": [
-      null,
-      "Gold Ingot",
-      null,
-      null,
-      "Stick",
-      null,
-      null,
-      "Stick",
-      null
-    ],
+    "recipe": [null, "Gold Ingot", null, null, "Stick", null, null, "Stick", null],
     "shapeless": false
   },
   {
     "item": "Golden Sword",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Golden Sword",
-      "Golden Sword",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Golden Sword", "Golden Sword", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Golden Sword",
     "quantity": 1,
-    "recipe": [
-      null,
-      "Gold Ingot",
-      null,
-      null,
-      "Gold Ingot",
-      null,
-      null,
-      "Stick",
-      null
-    ],
+    "recipe": [null, "Gold Ingot", null, null, "Gold Ingot", null, null, "Stick", null],
     "shapeless": false
   },
   {
     "item": "Granite",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Diorite",
-      "Nether Quartz",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Diorite", "Nether Quartz", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Granite Slab",
     "quantity": 6,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      "Granite",
-      "Granite",
-      "Granite"
-    ],
+    "recipe": [null, null, null, null, null, null, "Granite", "Granite", "Granite"],
     "shapeless": false
   },
   {
     "item": "Granite Stairs",
     "quantity": 4,
-    "recipe": [
-      "Granite",
-      null,
-      null,
-      "Granite",
-      "Granite",
-      null,
-      "Granite",
-      "Granite",
-      "Granite"
-    ],
+    "recipe": ["Granite", null, null, "Granite", "Granite", null, "Granite", "Granite", "Granite"],
     "shapeless": false
   },
   {
@@ -4627,33 +3425,13 @@
   {
     "item": "Gray Concrete Powder",
     "quantity": 8,
-    "recipe": [
-      "Gray Dye",
-      "Sand",
-      "Sand",
-      "Sand",
-      "Sand",
-      "Gravel",
-      "Gravel",
-      "Gravel",
-      "Gravel"
-    ],
+    "recipe": ["Gray Dye", "Sand", "Sand", "Sand", "Sand", "Gravel", "Gravel", "Gravel", "Gravel"],
     "shapeless": true
   },
   {
     "item": "Gray Dye",
     "quantity": 2,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Black Dye",
-      "White Dye",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Black Dye", "White Dye", null, null, null, null],
     "shapeless": true
   },
   {
@@ -4692,17 +3470,7 @@
   {
     "item": "Gray Stained Glass",
     "quantity": 8,
-    "recipe": [
-      "Glass",
-      "Glass",
-      "Glass",
-      "Glass",
-      "Gray Dye",
-      "Glass",
-      "Glass",
-      "Glass",
-      "Glass"
-    ],
+    "recipe": ["Glass", "Glass", "Glass", "Glass", "Gray Dye", "Glass", "Glass", "Glass", "Glass"],
     "shapeless": false
   },
   {
@@ -4724,17 +3492,7 @@
   {
     "item": "Gray Wool",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "White Wool",
-      "Gray Dye",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "White Wool", "Gray Dye", null, null, null, null],
     "shapeless": true
   },
   {
@@ -4799,17 +3557,7 @@
   {
     "item": "Green Concrete Powder",
     "quantity": 8,
-    "recipe": [
-      "Green Dye",
-      "Sand",
-      "Sand",
-      "Sand",
-      "Sand",
-      "Gravel",
-      "Gravel",
-      "Gravel",
-      "Gravel"
-    ],
+    "recipe": ["Green Dye", "Sand", "Sand", "Sand", "Sand", "Gravel", "Gravel", "Gravel", "Gravel"],
     "shapeless": true
   },
   {
@@ -4848,17 +3596,7 @@
   {
     "item": "Green Stained Glass",
     "quantity": 8,
-    "recipe": [
-      "Glass",
-      "Glass",
-      "Glass",
-      "Glass",
-      "Green Dye",
-      "Glass",
-      "Glass",
-      "Glass",
-      "Glass"
-    ],
+    "recipe": ["Glass", "Glass", "Glass", "Glass", "Green Dye", "Glass", "Glass", "Glass", "Glass"],
     "shapeless": false
   },
   {
@@ -4880,49 +3618,19 @@
   {
     "item": "Green Wool",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "White Wool",
-      "Green Dye",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "White Wool", "Green Dye", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Hay Bale",
     "quantity": 1,
-    "recipe": [
-      "Wheat",
-      "Wheat",
-      "Wheat",
-      "Wheat",
-      "Wheat",
-      "Wheat",
-      "Wheat",
-      "Wheat",
-      "Wheat"
-    ],
+    "recipe": ["Wheat", "Wheat", "Wheat", "Wheat", "Wheat", "Wheat", "Wheat", "Wheat", "Wheat"],
     "shapeless": false
   },
   {
     "item": "Heavy Weighted Pressure Plate",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Iron Ingot",
-      "Iron Ingot",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Iron Ingot", "Iron Ingot", null, null, null, null],
     "shapeless": false
   },
   {
@@ -4960,33 +3668,13 @@
   {
     "item": "Iron Axe",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Iron Axe",
-      "Iron Axe",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Iron Axe", "Iron Axe", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Iron Axe",
     "quantity": 1,
-    "recipe": [
-      "Iron Ingot",
-      "Iron Ingot",
-      null,
-      "Iron Ingot",
-      "Stick",
-      null,
-      null,
-      "Stick",
-      null
-    ],
+    "recipe": ["Iron Ingot", "Iron Ingot", null, "Iron Ingot", "Stick", null, null, "Stick", null],
     "shapeless": false
   },
   {
@@ -5008,17 +3696,7 @@
   {
     "item": "Iron Boots",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Iron Boots",
-      "Iron Boots",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Iron Boots", "Iron Boots", null, null, null, null],
     "shapeless": true
   },
   {
@@ -5040,17 +3718,7 @@
   {
     "item": "Iron Chestplate",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Iron Chestplate",
-      "Iron Chestplate",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Iron Chestplate", "Iron Chestplate", null, null, null, null],
     "shapeless": true
   },
   {
@@ -5088,65 +3756,25 @@
   {
     "item": "Iron Helmet",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Iron Helmet",
-      "Iron Helmet",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Iron Helmet", "Iron Helmet", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Iron Hoe",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Iron Hoe",
-      "Iron Hoe",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Iron Hoe", "Iron Hoe", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Iron Hoe",
     "quantity": 1,
-    "recipe": [
-      "Iron Ingot",
-      "Iron Ingot",
-      null,
-      null,
-      "Stick",
-      null,
-      null,
-      "Stick",
-      null
-    ],
+    "recipe": ["Iron Ingot", "Iron Ingot", null, null, "Stick", null, null, "Stick", null],
     "shapeless": false
   },
   {
     "item": "Iron Ingot",
     "quantity": 9,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Block of Iron",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Block of Iron", null, null, null, null],
     "shapeless": false
   },
   {
@@ -5184,129 +3812,49 @@
   {
     "item": "Iron Leggings",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Iron Leggings",
-      "Iron Leggings",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Iron Leggings", "Iron Leggings", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Iron Nugget",
     "quantity": 9,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Iron Ingot",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Iron Ingot", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Iron Pickaxe",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Iron Pickaxe",
-      "Iron Pickaxe",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Iron Pickaxe", "Iron Pickaxe", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Iron Pickaxe",
     "quantity": 1,
-    "recipe": [
-      "Iron Ingot",
-      "Iron Ingot",
-      "Iron Ingot",
-      null,
-      "Stick",
-      null,
-      null,
-      "Stick",
-      null
-    ],
+    "recipe": ["Iron Ingot", "Iron Ingot", "Iron Ingot", null, "Stick", null, null, "Stick", null],
     "shapeless": false
   },
   {
     "item": "Iron Shovel",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Iron Shovel",
-      "Iron Shovel",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Iron Shovel", "Iron Shovel", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Iron Shovel",
     "quantity": 1,
-    "recipe": [
-      null,
-      "Iron Ingot",
-      null,
-      null,
-      "Stick",
-      null,
-      null,
-      "Stick",
-      null
-    ],
+    "recipe": [null, "Iron Ingot", null, null, "Stick", null, null, "Stick", null],
     "shapeless": false
   },
   {
     "item": "Iron Sword",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Iron Sword",
-      "Iron Sword",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Iron Sword", "Iron Sword", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Iron Sword",
     "quantity": 1,
-    "recipe": [
-      null,
-      "Iron Ingot",
-      null,
-      null,
-      "Iron Ingot",
-      null,
-      null,
-      "Stick",
-      null
-    ],
+    "recipe": [null, "Iron Ingot", null, null, "Iron Ingot", null, null, "Stick", null],
     "shapeless": false
   },
   {
@@ -5328,17 +3876,7 @@
   {
     "item": "Jack o'Lantern",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Carved Pumpkin",
-      null,
-      null,
-      "Torch",
-      null
-    ],
+    "recipe": [null, null, null, null, "Carved Pumpkin", null, null, "Torch", null],
     "shapeless": false
   },
   {
@@ -5360,17 +3898,7 @@
   {
     "item": "Jungle Button",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Jungle Planks",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Jungle Planks", null, null, null, null],
     "shapeless": false
   },
   {
@@ -5408,33 +3936,13 @@
   {
     "item": "Jungle Planks",
     "quantity": 4,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Jungle Log",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Jungle Log", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Jungle Pressure Plate",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Jungle Planks",
-      "Jungle Planks",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Jungle Planks", "Jungle Planks", null, null, null, null],
     "shapeless": false
   },
   {
@@ -5504,33 +4012,13 @@
   {
     "item": "Lapis Lazuli",
     "quantity": 9,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Block of Lapis Lazuli",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Block of Lapis Lazuli", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Lead",
     "quantity": 2,
-    "recipe": [
-      "String",
-      "String",
-      null,
-      "String",
-      "Slimeball",
-      null,
-      null,
-      null,
-      "String"
-    ],
+    "recipe": ["String", "String", null, "String", "Slimeball", null, null, null, "String"],
     "shapeless": false
   },
   {
@@ -5552,65 +4040,25 @@
   {
     "item": "Leather Boots",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Leather",
-      null,
-      "Leather",
-      "Leather",
-      null,
-      "Leather"
-    ],
+    "recipe": [null, null, null, "Leather", null, "Leather", "Leather", null, "Leather"],
     "shapeless": false
   },
   {
     "item": "Leather Boots",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Leather Boots",
-      "Leather Boots",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Leather Boots", "Leather Boots", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Leather Cap",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Leather",
-      "Leather",
-      "Leather",
-      "Leather",
-      null,
-      "Leather"
-    ],
+    "recipe": [null, null, null, "Leather", "Leather", "Leather", "Leather", null, "Leather"],
     "shapeless": false
   },
   {
     "item": "Leather Cap",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Leather Cap",
-      "Leather Cap",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Leather Cap", "Leather Cap", null, null, null, null],
     "shapeless": true
   },
   {
@@ -5648,17 +4096,7 @@
   {
     "item": "Leather Pants",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Leather Pants",
-      "Leather Pants",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Leather Pants", "Leather Pants", null, null, null, null],
     "shapeless": true
   },
   {
@@ -5680,49 +4118,19 @@
   {
     "item": "Leather Tunic",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Leather Tunic",
-      "Leather Tunic",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Leather Tunic", "Leather Tunic", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Lectern",
     "quantity": 1,
-    "recipe": [
-      [],
-      [],
-      [],
-      null,
-      "Bookshelf",
-      null,
-      null,
-      [],
-      null
-    ],
+    "recipe": [[], [], [], null, "Bookshelf", null, null, [], null],
     "shapeless": false
   },
   {
     "item": "Lever",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Stick",
-      null,
-      null,
-      "Cobblestone",
-      null
-    ],
+    "recipe": [null, null, null, null, "Stick", null, null, "Cobblestone", null],
     "shapeless": false
   },
   {
@@ -5803,33 +4211,13 @@
   {
     "item": "Light Blue Dye",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Blue Orchid",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Blue Orchid", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Light Blue Dye",
     "quantity": 2,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Blue Dye",
-      "White Dye",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Blue Dye", "White Dye", null, null, null, null],
     "shapeless": true
   },
   {
@@ -5900,17 +4288,7 @@
   {
     "item": "Light Blue Wool",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "White Wool",
-      "Light Blue Dye",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "White Wool", "Light Blue Dye", null, null, null, null],
     "shapeless": true
   },
   {
@@ -5991,81 +4369,31 @@
   {
     "item": "Light Gray Dye",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Azure Bluet",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Azure Bluet", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Light Gray Dye",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Oxeye Daisy",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Oxeye Daisy", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Light Gray Dye",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "White Tulip",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "White Tulip", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Light Gray Dye",
     "quantity": 3,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Black Dye",
-      "White Dye",
-      null,
-      null,
-      "White Dye",
-      null
-    ],
+    "recipe": [null, null, null, "Black Dye", "White Dye", null, null, "White Dye", null],
     "shapeless": true
   },
   {
     "item": "Light Gray Dye",
     "quantity": 2,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Gray Dye",
-      "White Dye",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Gray Dye", "White Dye", null, null, null, null],
     "shapeless": true
   },
   {
@@ -6136,49 +4464,19 @@
   {
     "item": "Light Gray Wool",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "White Wool",
-      "Light Gray Dye",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "White Wool", "Light Gray Dye", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Light Weighted Pressure Plate",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Gold Ingot",
-      "Gold Ingot",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Gold Ingot", "Gold Ingot", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Lightning Rod",
     "quantity": 1,
-    "recipe": [
-      null,
-      "Copper Ingot",
-      null,
-      null,
-      "Copper Ingot",
-      null,
-      null,
-      "Copper Ingot",
-      null
-    ],
+    "recipe": [null, "Copper Ingot", null, null, "Copper Ingot", null, null, "Copper Ingot", null],
     "shapeless": false
   },
   {
@@ -6243,33 +4541,13 @@
   {
     "item": "Lime Concrete Powder",
     "quantity": 8,
-    "recipe": [
-      "Lime Dye",
-      "Sand",
-      "Sand",
-      "Sand",
-      "Sand",
-      "Gravel",
-      "Gravel",
-      "Gravel",
-      "Gravel"
-    ],
+    "recipe": ["Lime Dye", "Sand", "Sand", "Sand", "Sand", "Gravel", "Gravel", "Gravel", "Gravel"],
     "shapeless": true
   },
   {
     "item": "Lime Dye",
     "quantity": 2,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Green Dye",
-      "White Dye",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Green Dye", "White Dye", null, null, null, null],
     "shapeless": true
   },
   {
@@ -6308,17 +4586,7 @@
   {
     "item": "Lime Stained Glass",
     "quantity": 8,
-    "recipe": [
-      "Glass",
-      "Glass",
-      "Glass",
-      "Glass",
-      "Lime Dye",
-      "Glass",
-      "Glass",
-      "Glass",
-      "Glass"
-    ],
+    "recipe": ["Glass", "Glass", "Glass", "Glass", "Lime Dye", "Glass", "Glass", "Glass", "Glass"],
     "shapeless": false
   },
   {
@@ -6340,17 +4608,7 @@
   {
     "item": "Lime Wool",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "White Wool",
-      "Lime Dye",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "White Wool", "Lime Dye", null, null, null, null],
     "shapeless": true
   },
   {
@@ -6431,81 +4689,31 @@
   {
     "item": "Magenta Dye",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Allium",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Allium", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Magenta Dye",
     "quantity": 2,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Lilac",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Lilac", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Magenta Dye",
     "quantity": 2,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Purple Dye",
-      "Pink Dye",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Purple Dye", "Pink Dye", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Magenta Dye",
     "quantity": 3,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Blue Dye",
-      "Red Dye",
-      null,
-      null,
-      "Pink Dye",
-      null
-    ],
+    "recipe": [null, null, null, "Blue Dye", "Red Dye", null, null, "Pink Dye", null],
     "shapeless": true
   },
   {
     "item": "Magenta Dye",
     "quantity": 4,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Blue Dye",
-      "Red Dye",
-      null,
-      "Red Dye",
-      "White Dye",
-      null
-    ],
+    "recipe": [null, null, null, "Blue Dye", "Red Dye", null, "Red Dye", "White Dye", null],
     "shapeless": true
   },
   {
@@ -6576,33 +4784,13 @@
   {
     "item": "Magenta Wool",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "White Wool",
-      "Magenta Dye",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "White Wool", "Magenta Dye", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Magma Cream",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Blaze Powder",
-      "Slimeball",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Blaze Powder", "Slimeball", null, null, null, null],
     "shapeless": true
   },
   {
@@ -6624,17 +4812,7 @@
   {
     "item": "Melon Seeds",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Melon Slice",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Melon Slice", null, null, null, null],
     "shapeless": false
   },
   {
@@ -6656,97 +4834,37 @@
   {
     "item": "Minecart with Chest",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Chest",
-      null,
-      null,
-      "Minecart",
-      null
-    ],
+    "recipe": [null, null, null, null, "Chest", null, null, "Minecart", null],
     "shapeless": false
   },
   {
     "item": "Minecart with Furnace",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Furnace",
-      null,
-      null,
-      "Minecart",
-      null
-    ],
+    "recipe": [null, null, null, null, "Furnace", null, null, "Minecart", null],
     "shapeless": false
   },
   {
     "item": "Minecart with Hopper",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Hopper",
-      null,
-      null,
-      "Minecart",
-      null
-    ],
+    "recipe": [null, null, null, null, "Hopper", null, null, "Minecart", null],
     "shapeless": false
   },
   {
     "item": "Minecart with TNT",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "TNT",
-      null,
-      null,
-      "Minecart",
-      null
-    ],
+    "recipe": [null, null, null, null, "TNT", null, null, "Minecart", null],
     "shapeless": false
   },
   {
     "item": "Mossy Cobblestone",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Cobblestone",
-      "Vines",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Cobblestone", "Vines", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Mossy Cobblestone",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Cobblestone",
-      "Moss Block",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Cobblestone", "Moss Block", null, null, null, null],
     "shapeless": true
   },
   {
@@ -6816,49 +4934,19 @@
   {
     "item": "Mossy Stone Bricks",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Stone Bricks",
-      "Vines",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Stone Bricks", "Vines", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Mossy Stone Bricks",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Stone Bricks",
-      "Moss Block",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Stone Bricks", "Moss Block", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Mushroom Stew",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Red Mushroom",
-      "Brown Mushroom",
-      null,
-      null,
-      "Bowl",
-      null
-    ],
+    "recipe": [null, null, null, "Red Mushroom", "Brown Mushroom", null, null, "Bowl", null],
     "shapeless": true
   },
   {
@@ -6928,33 +5016,13 @@
   {
     "item": "Netherite Axe",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Netherite Axe",
-      "Netherite Axe",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Netherite Axe", "Netherite Axe", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Netherite Boots",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Netherite Boots",
-      "Netherite Boots",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Netherite Boots", "Netherite Boots", null, null, null, null],
     "shapeless": true
   },
   {
@@ -6976,33 +5044,13 @@
   {
     "item": "Netherite Helmet",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Netherite Helmet",
-      "Netherite Helmet",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Netherite Helmet", "Netherite Helmet", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Netherite Hoe",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Netherite Hoe",
-      "Netherite Hoe",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Netherite Hoe", "Netherite Hoe", null, null, null, null],
     "shapeless": true
   },
   {
@@ -7024,17 +5072,7 @@
   {
     "item": "Netherite Ingot",
     "quantity": 9,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Block of Netherite",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Block of Netherite", null, null, null, null],
     "shapeless": false
   },
   {
@@ -7056,49 +5094,19 @@
   {
     "item": "Netherite Pickaxe",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Netherite Pickaxe",
-      "Netherite Pickaxe",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Netherite Pickaxe", "Netherite Pickaxe", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Netherite Shovel",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Netherite Shovel",
-      "Netherite Shovel",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Netherite Shovel", "Netherite Shovel", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Netherite Sword",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Netherite Sword",
-      "Netherite Sword",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Netherite Sword", "Netherite Sword", null, null, null, null],
     "shapeless": true
   },
   {
@@ -7208,17 +5216,7 @@
   {
     "item": "Oak Button",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Oak Planks",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Oak Planks", null, null, null, null],
     "shapeless": false
   },
   {
@@ -7240,65 +5238,25 @@
   {
     "item": "Oak Fence Gate",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Stick",
-      "Oak Planks",
-      "Stick",
-      "Stick",
-      "Oak Planks",
-      "Stick"
-    ],
+    "recipe": [null, null, null, "Stick", "Oak Planks", "Stick", "Stick", "Oak Planks", "Stick"],
     "shapeless": false
   },
   {
     "item": "Oak Planks",
     "quantity": 4,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Oak Log",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Oak Log", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Oak Pressure Plate",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Oak Planks",
-      "Oak Planks",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Oak Planks", "Oak Planks", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Oak Slab",
     "quantity": 6,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      "Oak Planks",
-      "Oak Planks",
-      "Oak Planks"
-    ],
+    "recipe": [null, null, null, null, null, null, "Oak Planks", "Oak Planks", "Oak Planks"],
     "shapeless": false
   },
   {
@@ -7336,17 +5294,7 @@
   {
     "item": "Oak Wood",
     "quantity": 3,
-    "recipe": [
-      "Oak Log",
-      "Oak Log",
-      null,
-      "Oak Log",
-      "Oak Log",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": ["Oak Log", "Oak Log", null, "Oak Log", "Oak Log", null, null, null, null],
     "shapeless": false
   },
   {
@@ -7475,33 +5423,13 @@
   {
     "item": "Orange Dye",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Orange Tulip",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Orange Tulip", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Orange Dye",
     "quantity": 2,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Red Dye",
-      "Yellow Dye",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Red Dye", "Yellow Dye", null, null, null, null],
     "shapeless": true
   },
   {
@@ -7572,17 +5500,7 @@
   {
     "item": "Orange Wool",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "White Wool",
-      "Orange Dye",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "White Wool", "Orange Dye", null, null, null, null],
     "shapeless": true
   },
   {
@@ -7636,33 +5554,13 @@
   {
     "item": "Packed Ice",
     "quantity": 1,
-    "recipe": [
-      "Ice",
-      "Ice",
-      "Ice",
-      "Ice",
-      "Ice",
-      "Ice",
-      "Ice",
-      "Ice",
-      "Ice"
-    ],
+    "recipe": ["Ice", "Ice", "Ice", "Ice", "Ice", "Ice", "Ice", "Ice", "Ice"],
     "shapeless": false
   },
   {
     "item": "Paper",
     "quantity": 3,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Sugar Cane",
-      "Sugar Cane",
-      "Sugar Cane",
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Sugar Cane", "Sugar Cane", "Sugar Cane", null, null, null],
     "shapeless": false
   },
   {
@@ -7727,65 +5625,25 @@
   {
     "item": "Pink Concrete Powder",
     "quantity": 8,
-    "recipe": [
-      "Pink Dye",
-      "Sand",
-      "Sand",
-      "Sand",
-      "Sand",
-      "Gravel",
-      "Gravel",
-      "Gravel",
-      "Gravel"
-    ],
+    "recipe": ["Pink Dye", "Sand", "Sand", "Sand", "Sand", "Gravel", "Gravel", "Gravel", "Gravel"],
     "shapeless": true
   },
   {
     "item": "Pink Dye",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Pink Tulip",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Pink Tulip", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Pink Dye",
     "quantity": 2,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Peony",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Peony", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Pink Dye",
     "quantity": 2,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Red Dye",
-      "White Dye",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Red Dye", "White Dye", null, null, null, null],
     "shapeless": true
   },
   {
@@ -7824,17 +5682,7 @@
   {
     "item": "Pink Stained Glass",
     "quantity": 8,
-    "recipe": [
-      "Glass",
-      "Glass",
-      "Glass",
-      "Glass",
-      "Pink Dye",
-      "Glass",
-      "Glass",
-      "Glass",
-      "Glass"
-    ],
+    "recipe": ["Glass", "Glass", "Glass", "Glass", "Pink Dye", "Glass", "Glass", "Glass", "Glass"],
     "shapeless": false
   },
   {
@@ -7856,17 +5704,7 @@
   {
     "item": "Pink Wool",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "White Wool",
-      "Pink Dye",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "White Wool", "Pink Dye", null, null, null, null],
     "shapeless": true
   },
   {
@@ -7915,17 +5753,7 @@
   {
     "item": "Polished Andesite",
     "quantity": 4,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Andesite",
-      "Andesite",
-      null,
-      "Andesite",
-      "Andesite",
-      null
-    ],
+    "recipe": [null, null, null, "Andesite", "Andesite", null, "Andesite", "Andesite", null],
     "shapeless": false
   },
   {
@@ -8027,17 +5855,7 @@
   {
     "item": "Polished Blackstone Button",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Polished Blackstone",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Polished Blackstone", null, null, null, null],
     "shapeless": false
   },
   {
@@ -8139,17 +5957,7 @@
   {
     "item": "Polished Diorite",
     "quantity": 4,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Diorite",
-      "Diorite",
-      null,
-      "Diorite",
-      "Diorite",
-      null
-    ],
+    "recipe": [null, null, null, "Diorite", "Diorite", null, "Diorite", "Diorite", null],
     "shapeless": false
   },
   {
@@ -8187,17 +5995,7 @@
   {
     "item": "Polished Granite",
     "quantity": 4,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Granite",
-      "Granite",
-      null,
-      "Granite",
-      "Granite",
-      null
-    ],
+    "recipe": [null, null, null, "Granite", "Granite", null, "Granite", "Granite", null],
     "shapeless": false
   },
   {
@@ -8299,33 +6097,13 @@
   {
     "item": "Pumpkin Pie",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Pumpkin",
-      "Sugar",
-      null,
-      null,
-      "Egg",
-      null
-    ],
+    "recipe": [null, null, null, "Pumpkin", "Sugar", null, null, "Egg", null],
     "shapeless": true
   },
   {
     "item": "Pumpkin Seeds",
     "quantity": 4,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Pumpkin",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Pumpkin", null, null, null, null],
     "shapeless": false
   },
   {
@@ -8406,17 +6184,7 @@
   {
     "item": "Purple Dye",
     "quantity": 2,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Blue Dye",
-      "Red Dye",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Blue Dye", "Red Dye", null, null, null, null],
     "shapeless": true
   },
   {
@@ -8487,17 +6255,7 @@
   {
     "item": "Purple Wool",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "White Wool",
-      "Purple Dye",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "White Wool", "Purple Dye", null, null, null, null],
     "shapeless": true
   },
   {
@@ -8519,17 +6277,7 @@
   {
     "item": "Purpur Pillar",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Purpur Slab",
-      null,
-      null,
-      "Purpur Slab",
-      null
-    ],
+    "recipe": [null, null, null, null, "Purpur Slab", null, null, "Purpur Slab", null],
     "shapeless": false
   },
   {
@@ -8542,18 +6290,9 @@
       null,
       null,
       null,
-      [
-        "Purpur Block",
-        "Purpur Pillar"
-      ],
-      [
-        "Purpur Block",
-        "Purpur Pillar"
-      ],
-      [
-        "Purpur Block",
-        "Purpur Pillar"
-      ]
+      ["Purpur Block", "Purpur Pillar"],
+      ["Purpur Block", "Purpur Pillar"],
+      ["Purpur Block", "Purpur Pillar"]
     ],
     "shapeless": false
   },
@@ -8561,33 +6300,15 @@
     "item": "Purpur Stairs",
     "quantity": 4,
     "recipe": [
-      [
-        "Purpur Block",
-        "Purpur Pillar"
-      ],
+      ["Purpur Block", "Purpur Pillar"],
       null,
       null,
-      [
-        "Purpur Block",
-        "Purpur Pillar"
-      ],
-      [
-        "Purpur Block",
-        "Purpur Pillar"
-      ],
+      ["Purpur Block", "Purpur Pillar"],
+      ["Purpur Block", "Purpur Pillar"],
       null,
-      [
-        "Purpur Block",
-        "Purpur Pillar"
-      ],
-      [
-        "Purpur Block",
-        "Purpur Pillar"
-      ],
-      [
-        "Purpur Block",
-        "Purpur Pillar"
-      ]
+      ["Purpur Block", "Purpur Pillar"],
+      ["Purpur Block", "Purpur Pillar"],
+      ["Purpur Block", "Purpur Pillar"]
     ],
     "shapeless": false
   },
@@ -8617,21 +6338,9 @@
       null,
       null,
       null,
-      [
-        "Block of Quartz",
-        "Chiseled Quartz Block",
-        "Quartz Pillar"
-      ],
-      [
-        "Block of Quartz",
-        "Chiseled Quartz Block",
-        "Quartz Pillar"
-      ],
-      [
-        "Block of Quartz",
-        "Chiseled Quartz Block",
-        "Quartz Pillar"
-      ]
+      ["Block of Quartz", "Chiseled Quartz Block", "Quartz Pillar"],
+      ["Block of Quartz", "Chiseled Quartz Block", "Quartz Pillar"],
+      ["Block of Quartz", "Chiseled Quartz Block", "Quartz Pillar"]
     ],
     "shapeless": false
   },
@@ -8639,39 +6348,15 @@
     "item": "Quartz Stairs",
     "quantity": 4,
     "recipe": [
-      [
-        "Block of Quartz",
-        "Chiseled Quartz Block",
-        "Quartz Pillar"
-      ],
+      ["Block of Quartz", "Chiseled Quartz Block", "Quartz Pillar"],
       null,
       null,
-      [
-        "Block of Quartz",
-        "Chiseled Quartz Block",
-        "Quartz Pillar"
-      ],
-      [
-        "Block of Quartz",
-        "Chiseled Quartz Block",
-        "Quartz Pillar"
-      ],
+      ["Block of Quartz", "Chiseled Quartz Block", "Quartz Pillar"],
+      ["Block of Quartz", "Chiseled Quartz Block", "Quartz Pillar"],
       null,
-      [
-        "Block of Quartz",
-        "Chiseled Quartz Block",
-        "Quartz Pillar"
-      ],
-      [
-        "Block of Quartz",
-        "Chiseled Quartz Block",
-        "Quartz Pillar"
-      ],
-      [
-        "Block of Quartz",
-        "Chiseled Quartz Block",
-        "Quartz Pillar"
-      ]
+      ["Block of Quartz", "Chiseled Quartz Block", "Quartz Pillar"],
+      ["Block of Quartz", "Chiseled Quartz Block", "Quartz Pillar"],
+      ["Block of Quartz", "Chiseled Quartz Block", "Quartz Pillar"]
     ],
     "shapeless": false
   },
@@ -8684,10 +6369,7 @@
       null,
       "Carrot",
       "Baked Potato",
-      [
-        "Red Mushroom",
-        "Brown Mushroom"
-      ],
+      ["Red Mushroom", "Brown Mushroom"],
       null,
       "Bowl",
       null
@@ -8713,49 +6395,19 @@
   {
     "item": "Raw Copper",
     "quantity": 9,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Block of Raw Copper",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Block of Raw Copper", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Raw Gold",
     "quantity": 9,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Block of Raw Gold",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Block of Raw Gold", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Raw Iron",
     "quantity": 9,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Block of Raw Iron",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Block of Raw Iron", null, null, null, null],
     "shapeless": false
   },
   {
@@ -8820,81 +6472,31 @@
   {
     "item": "Red Concrete Powder",
     "quantity": 8,
-    "recipe": [
-      "Red Dye",
-      "Sand",
-      "Sand",
-      "Sand",
-      "Sand",
-      "Gravel",
-      "Gravel",
-      "Gravel",
-      "Gravel"
-    ],
+    "recipe": ["Red Dye", "Sand", "Sand", "Sand", "Sand", "Gravel", "Gravel", "Gravel", "Gravel"],
     "shapeless": true
   },
   {
     "item": "Red Dye",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Poppy",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Poppy", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Red Dye",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Red Tulip",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Red Tulip", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Red Dye",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Beetroot",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Beetroot", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Red Dye",
     "quantity": 2,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Rose Bush",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Rose Bush", null, null, null, null],
     "shapeless": false
   },
   {
@@ -8948,17 +6550,7 @@
   {
     "item": "Red Sandstone",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Red Sand",
-      "Red Sand",
-      null,
-      "Red Sand",
-      "Red Sand",
-      null
-    ],
+    "recipe": [null, null, null, "Red Sand", "Red Sand", null, "Red Sand", "Red Sand", null],
     "shapeless": false
   },
   {
@@ -9045,17 +6637,7 @@
   {
     "item": "Red Stained Glass",
     "quantity": 8,
-    "recipe": [
-      "Glass",
-      "Glass",
-      "Glass",
-      "Glass",
-      "Red Dye",
-      "Glass",
-      "Glass",
-      "Glass",
-      "Glass"
-    ],
+    "recipe": ["Glass", "Glass", "Glass", "Glass", "Red Dye", "Glass", "Glass", "Glass", "Glass"],
     "shapeless": false
   },
   {
@@ -9077,17 +6659,7 @@
   {
     "item": "Red Wool",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "White Wool",
-      "Red Dye",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "White Wool", "Red Dye", null, null, null, null],
     "shapeless": true
   },
   {
@@ -9109,17 +6681,7 @@
   {
     "item": "Redstone Dust",
     "quantity": 9,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Block of Redstone",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Block of Redstone", null, null, null, null],
     "shapeless": false
   },
   {
@@ -9157,49 +6719,19 @@
   {
     "item": "Redstone Torch",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Redstone Dust",
-      null,
-      null,
-      "Stick",
-      null
-    ],
+    "recipe": [null, null, null, null, "Redstone Dust", null, null, "Stick", null],
     "shapeless": false
   },
   {
     "item": "Sandstone",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Sand",
-      "Sand",
-      null,
-      "Sand",
-      "Sand",
-      null
-    ],
+    "recipe": [null, null, null, "Sand", "Sand", null, "Sand", "Sand", null],
     "shapeless": false
   },
   {
     "item": "Sandstone Slab",
     "quantity": 6,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      "Sandstone",
-      "Sandstone",
-      "Sandstone"
-    ],
+    "recipe": [null, null, null, null, null, null, "Sandstone", "Sandstone", "Sandstone"],
     "shapeless": false
   },
   {
@@ -9237,49 +6769,19 @@
   {
     "item": "Scaffolding",
     "quantity": 6,
-    "recipe": [
-      "Bamboo",
-      "String",
-      "Bamboo",
-      "Bamboo",
-      null,
-      "Bamboo",
-      "Bamboo",
-      null,
-      "Bamboo"
-    ],
+    "recipe": ["Bamboo", "String", "Bamboo", "Bamboo", null, "Bamboo", "Bamboo", null, "Bamboo"],
     "shapeless": false
   },
   {
     "item": "Shears",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Iron Ingot",
-      null,
-      "Iron Ingot",
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Iron Ingot", null, "Iron Ingot", null, null],
     "shapeless": false
   },
   {
     "item": "Shears",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Shears",
-      "Shears",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Shears", "Shears", null, null, null, null],
     "shapeless": true
   },
   {
@@ -9355,33 +6857,13 @@
   {
     "item": "Shield",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Shield",
-      "Shield",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Shield", "Shield", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Slimeball",
     "quantity": 9,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Slime Block",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Slime Block", null, null, null, null],
     "shapeless": false
   },
   {
@@ -9483,33 +6965,13 @@
   {
     "item": "Smooth Stone Slab",
     "quantity": 6,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      "Smooth Stone",
-      "Smooth Stone",
-      "Smooth Stone"
-    ],
+    "recipe": [null, null, null, null, null, null, "Smooth Stone", "Smooth Stone", "Smooth Stone"],
     "shapeless": false
   },
   {
     "item": "Snow Block",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Snowball",
-      "Snowball",
-      null,
-      "Snowball",
-      "Snowball",
-      null
-    ],
+    "recipe": [null, null, null, "Snowball", "Snowball", null, "Snowball", "Snowball", null],
     "shapeless": false
   },
   {
@@ -9547,17 +7009,7 @@
   {
     "item": "Spruce Button",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Spruce Planks",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Spruce Planks", null, null, null, null],
     "shapeless": false
   },
   {
@@ -9595,33 +7047,13 @@
   {
     "item": "Spruce Planks",
     "quantity": 4,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Spruce Log",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Spruce Log", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Spruce Pressure Plate",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Spruce Planks",
-      "Spruce Planks",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Spruce Planks", "Spruce Planks", null, null, null, null],
     "shapeless": false
   },
   {
@@ -9725,55 +7157,23 @@
   {
     "item": "Stick",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Bamboo",
-      null,
-      null,
-      "Bamboo",
-      null
-    ],
+    "recipe": [null, null, null, null, "Bamboo", null, null, "Bamboo", null],
     "shapeless": false
   },
   {
     "item": "Sticky Piston",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Slimeball",
-      null,
-      null,
-      "Piston",
-      null
-    ],
+    "recipe": [null, null, null, null, "Slimeball", null, null, "Piston", null],
     "shapeless": false
   },
   {
     "item": "Stone Axe",
     "quantity": 1,
     "recipe": [
-      [
-        "Cobblestone",
-        "Blackstone",
-        "Cobbled Deepslate"
-      ],
-      [
-        "Cobblestone",
-        "Blackstone",
-        "Cobbled Deepslate"
-      ],
+      ["Cobblestone", "Blackstone", "Cobbled Deepslate"],
+      ["Cobblestone", "Blackstone", "Cobbled Deepslate"],
       null,
-      [
-        "Cobblestone",
-        "Blackstone",
-        "Cobbled Deepslate"
-      ],
+      ["Cobblestone", "Blackstone", "Cobbled Deepslate"],
       "Stick",
       null,
       null,
@@ -9785,17 +7185,7 @@
   {
     "item": "Stone Axe",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Stone Axe",
-      "Stone Axe",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Stone Axe", "Stone Axe", null, null, null, null],
     "shapeless": true
   },
   {
@@ -9817,17 +7207,7 @@
   {
     "item": "Stone Brick Slab",
     "quantity": 6,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      "Stone Bricks",
-      "Stone Bricks",
-      "Stone Bricks"
-    ],
+    "recipe": [null, null, null, null, null, null, "Stone Bricks", "Stone Bricks", "Stone Bricks"],
     "shapeless": false
   },
   {
@@ -9849,49 +7229,21 @@
   {
     "item": "Stone Bricks",
     "quantity": 4,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Stone",
-      "Stone",
-      null,
-      "Stone",
-      "Stone",
-      null
-    ],
+    "recipe": [null, null, null, "Stone", "Stone", null, "Stone", "Stone", null],
     "shapeless": false
   },
   {
     "item": "Stone Button",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Stone",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Stone", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Stone Hoe",
     "quantity": 1,
     "recipe": [
-      [
-        "Cobblestone",
-        "Blackstone",
-        "Cobbled Deepslate"
-      ],
-      [
-        "Cobblestone",
-        "Blackstone",
-        "Cobbled Deepslate"
-      ],
+      ["Cobblestone", "Blackstone", "Cobbled Deepslate"],
+      ["Cobblestone", "Blackstone", "Cobbled Deepslate"],
       null,
       null,
       "Stick",
@@ -9905,26 +7257,22 @@
   {
     "item": "Stone Hoe",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Stone Hoe",
-      "Stone Hoe",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Stone Hoe", "Stone Hoe", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Stone Hoe",
     "quantity": 1,
+    "recipe": ["Cobblestone", "Cobblestone", null, null, "Stick", null, null, "Stick", null],
+    "shapeless": false
+  },
+  {
+    "item": "Stone Pickaxe",
+    "quantity": 1,
     "recipe": [
-      "Cobblestone",
-      "Cobblestone",
-      null,
+      ["Cobblestone", "Blackstone", "Cobbled Deepslate"],
+      ["Cobblestone", "Blackstone", "Cobbled Deepslate"],
+      ["Cobblestone", "Blackstone", "Cobbled Deepslate"],
       null,
       "Stick",
       null,
@@ -9937,45 +7285,7 @@
   {
     "item": "Stone Pickaxe",
     "quantity": 1,
-    "recipe": [
-      [
-        "Cobblestone",
-        "Blackstone",
-        "Cobbled Deepslate"
-      ],
-      [
-        "Cobblestone",
-        "Blackstone",
-        "Cobbled Deepslate"
-      ],
-      [
-        "Cobblestone",
-        "Blackstone",
-        "Cobbled Deepslate"
-      ],
-      null,
-      "Stick",
-      null,
-      null,
-      "Stick",
-      null
-    ],
-    "shapeless": false
-  },
-  {
-    "item": "Stone Pickaxe",
-    "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Stone Pickaxe",
-      "Stone Pickaxe",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Stone Pickaxe", "Stone Pickaxe", null, null, null, null],
     "shapeless": true
   },
   {
@@ -9997,17 +7307,7 @@
   {
     "item": "Stone Pressure Plate",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Stone",
-      "Stone",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Stone", "Stone", null, null, null, null],
     "shapeless": false
   },
   {
@@ -10015,11 +7315,7 @@
     "quantity": 1,
     "recipe": [
       null,
-      [
-        "Cobblestone",
-        "Blackstone",
-        "Cobbled Deepslate"
-      ],
+      ["Cobblestone", "Blackstone", "Cobbled Deepslate"],
       null,
       null,
       "Stick",
@@ -10033,65 +7329,25 @@
   {
     "item": "Stone Shovel",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Stone Shovel",
-      "Stone Shovel",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Stone Shovel", "Stone Shovel", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Stone Shovel",
     "quantity": 1,
-    "recipe": [
-      null,
-      "Cobblestone",
-      null,
-      null,
-      "Stick",
-      null,
-      null,
-      "Stick",
-      null
-    ],
+    "recipe": [null, "Cobblestone", null, null, "Stick", null, null, "Stick", null],
     "shapeless": false
   },
   {
     "item": "Stone Slab",
     "quantity": 6,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      "Stone",
-      "Stone",
-      "Stone"
-    ],
+    "recipe": [null, null, null, null, null, null, "Stone", "Stone", "Stone"],
     "shapeless": false
   },
   {
     "item": "Stone Stairs",
     "quantity": 4,
-    "recipe": [
-      "Stone",
-      null,
-      null,
-      "Stone",
-      "Stone",
-      null,
-      "Stone",
-      "Stone",
-      "Stone"
-    ],
+    "recipe": ["Stone", null, null, "Stone", "Stone", null, "Stone", "Stone", "Stone"],
     "shapeless": false
   },
   {
@@ -10099,18 +7355,10 @@
     "quantity": 1,
     "recipe": [
       null,
-      [
-        "Cobblestone",
-        "Blackstone",
-        "Cobbled Deepslate"
-      ],
+      ["Cobblestone", "Blackstone", "Cobbled Deepslate"],
       null,
       null,
-      [
-        "Cobblestone",
-        "Blackstone",
-        "Cobbled Deepslate"
-      ],
+      ["Cobblestone", "Blackstone", "Cobbled Deepslate"],
       null,
       null,
       "Stick",
@@ -10121,33 +7369,13 @@
   {
     "item": "Stone Sword",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Stone Sword",
-      "Stone Sword",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Stone Sword", "Stone Sword", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Stone Sword",
     "quantity": 1,
-    "recipe": [
-      null,
-      "Cobblestone",
-      null,
-      null,
-      "Cobblestone",
-      null,
-      null,
-      "Stick",
-      null
-    ],
+    "recipe": [null, "Cobblestone", null, null, "Cobblestone", null, null, "Stick", null],
     "shapeless": false
   },
   {
@@ -10281,33 +7509,13 @@
   {
     "item": "Sugar",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Sugar Cane",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Sugar Cane", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Sugar",
     "quantity": 3,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Honey Bottle",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Honey Bottle", null, null, null, null],
     "shapeless": false
   },
   {
@@ -10432,49 +7640,19 @@
   {
     "item": "Turtle Shell",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Scute",
-      "Scute",
-      "Scute",
-      "Scute",
-      null,
-      "Scute"
-    ],
+    "recipe": [null, null, null, "Scute", "Scute", "Scute", "Scute", null, "Scute"],
     "shapeless": false
   },
   {
     "item": "Turtle Shell",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Turtle Shell",
-      "Turtle Shell",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Turtle Shell", "Turtle Shell", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Warped Button",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Warped Planks",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Warped Planks", null, null, null, null],
     "shapeless": false
   },
   {
@@ -10512,17 +7690,7 @@
   {
     "item": "Warped Fungus on a Stick",
     "quantity": 1,
-    "recipe": [
-      "Fishing Rod",
-      null,
-      null,
-      null,
-      "Warped Fungus",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": ["Fishing Rod", null, null, null, "Warped Fungus", null, null, null, null],
     "shapeless": false
   },
   {
@@ -10560,33 +7728,13 @@
   {
     "item": "Warped Planks",
     "quantity": 4,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Warped Stem",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Warped Stem", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Warped Pressure Plate",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Warped Planks",
-      "Warped Planks",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Warped Planks", "Warped Planks", null, null, null, null],
     "shapeless": false
   },
   {
@@ -10640,33 +7788,13 @@
   {
     "item": "Waxed Block of Copper",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Block of Copper",
-      "Honeycomb",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Block of Copper", "Honeycomb", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Waxed Cut Copper",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Cut Copper",
-      "Honeycomb",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Cut Copper", "Honeycomb", null, null, null, null],
     "shapeless": true
   },
   {
@@ -10704,17 +7832,7 @@
   {
     "item": "Waxed Cut Copper Slab",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Cut Copper Slab",
-      "Honeycomb",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Cut Copper Slab", "Honeycomb", null, null, null, null],
     "shapeless": false
   },
   {
@@ -10736,49 +7854,19 @@
   {
     "item": "Waxed Cut Copper Stairs",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Cut Copper Stairs",
-      "Honeycomb",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Cut Copper Stairs", "Honeycomb", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Waxed Exposed Copper",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Exposed Copper",
-      "Honeycomb",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Exposed Copper", "Honeycomb", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Waxed Exposed Cut Copper",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Exposed Cut Copper",
-      "Honeycomb",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Exposed Cut Copper", "Honeycomb", null, null, null, null],
     "shapeless": true
   },
   {
@@ -10816,17 +7904,7 @@
   {
     "item": "Waxed Exposed Cut Copper Slab",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Exposed Cut Copper Slab",
-      "Honeycomb",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Exposed Cut Copper Slab", "Honeycomb", null, null, null, null],
     "shapeless": false
   },
   {
@@ -10848,49 +7926,19 @@
   {
     "item": "Waxed Exposed Cut Copper Stairs",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Exposed Cut Copper Stairs",
-      "Honeycomb",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Exposed Cut Copper Stairs", "Honeycomb", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Waxed Oxidized Copper",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Oxidized Copper",
-      "Honeycomb",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Oxidized Copper", "Honeycomb", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Waxed Oxidized Cut Copper",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Oxidized Cut Copper",
-      "Honeycomb",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Oxidized Cut Copper", "Honeycomb", null, null, null, null],
     "shapeless": true
   },
   {
@@ -10928,17 +7976,7 @@
   {
     "item": "Waxed Oxidized Cut Copper Slab",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Oxidized Cut Copper Slab",
-      "Honeycomb",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Oxidized Cut Copper Slab", "Honeycomb", null, null, null, null],
     "shapeless": false
   },
   {
@@ -10960,49 +7998,19 @@
   {
     "item": "Waxed Oxidized Cut Copper Stairs",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Oxidized Cut Copper Stairs",
-      "Honeycomb",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Oxidized Cut Copper Stairs", "Honeycomb", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Waxed Weathered Copper",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Weathered Copper",
-      "Honeycomb",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Weathered Copper", "Honeycomb", null, null, null, null],
     "shapeless": true
   },
   {
     "item": "Waxed Weathered Cut Copper",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Weathered Cut Copper",
-      "Honeycomb",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Weathered Cut Copper", "Honeycomb", null, null, null, null],
     "shapeless": true
   },
   {
@@ -11040,17 +8048,7 @@
   {
     "item": "Waxed Weathered Cut Copper Slab",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Weathered Cut Copper Slab",
-      "Honeycomb",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Weathered Cut Copper Slab", "Honeycomb", null, null, null, null],
     "shapeless": false
   },
   {
@@ -11136,17 +8134,7 @@
   {
     "item": "Wheat",
     "quantity": 9,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Hay Bale",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Hay Bale", null, null, null, null],
     "shapeless": false
   },
   {
@@ -11195,49 +8183,19 @@
   {
     "item": "White Concrete Powder",
     "quantity": 8,
-    "recipe": [
-      "White Dye",
-      "Sand",
-      "Sand",
-      "Sand",
-      "Sand",
-      "Gravel",
-      "Gravel",
-      "Gravel",
-      "Gravel"
-    ],
+    "recipe": ["White Dye", "Sand", "Sand", "Sand", "Sand", "Gravel", "Gravel", "Gravel", "Gravel"],
     "shapeless": true
   },
   {
     "item": "White Dye",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Bone Meal",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Bone Meal", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "White Dye",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Lily of the Valley",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Lily of the Valley", null, null, null, null],
     "shapeless": false
   },
   {
@@ -11276,17 +8234,7 @@
   {
     "item": "White Stained Glass",
     "quantity": 8,
-    "recipe": [
-      "Glass",
-      "Glass",
-      "Glass",
-      "Glass",
-      "White Dye",
-      "Glass",
-      "Glass",
-      "Glass",
-      "Glass"
-    ],
+    "recipe": ["Glass", "Glass", "Glass", "Glass", "White Dye", "Glass", "Glass", "Glass", "Glass"],
     "shapeless": false
   },
   {
@@ -11308,33 +8256,13 @@
   {
     "item": "White Wool",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "String",
-      "String",
-      null,
-      "String",
-      "String",
-      null
-    ],
+    "recipe": [null, null, null, "String", "String", null, "String", "String", null],
     "shapeless": false
   },
   {
     "item": "Wooden Axe",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Wooden Axe",
-      "Wooden Axe",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Wooden Axe", "Wooden Axe", null, null, null, null],
     "shapeless": true
   },
   {
@@ -11383,17 +8311,7 @@
   {
     "item": "Wooden Hoe",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Wooden Hoe",
-      "Wooden Hoe",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Wooden Hoe", "Wooden Hoe", null, null, null, null],
     "shapeless": true
   },
   {
@@ -11433,17 +8351,7 @@
   {
     "item": "Wooden Pickaxe",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Wooden Pickaxe",
-      "Wooden Pickaxe",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Wooden Pickaxe", "Wooden Pickaxe", null, null, null, null],
     "shapeless": true
   },
   {
@@ -11492,17 +8400,7 @@
   {
     "item": "Wooden Shovel",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Wooden Shovel",
-      "Wooden Shovel",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Wooden Shovel", "Wooden Shovel", null, null, null, null],
     "shapeless": true
   },
   {
@@ -11533,17 +8431,7 @@
   {
     "item": "Wooden Sword",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "Wooden Sword",
-      "Wooden Sword",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "Wooden Sword", "Wooden Sword", null, null, null, null],
     "shapeless": true
   },
   {
@@ -11615,17 +8503,7 @@
   {
     "item": "Written Book",
     "quantity": 1,
-    "recipe": [
-      "Written Book",
-      "Book and Quill",
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": ["Written Book", "Book and Quill", null, null, null, null, null, null, null],
     "shapeless": true
   },
   {
@@ -11818,33 +8696,13 @@
   {
     "item": "Yellow Dye",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Dandelion",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Dandelion", null, null, null, null],
     "shapeless": false
   },
   {
     "item": "Yellow Dye",
     "quantity": 2,
-    "recipe": [
-      null,
-      null,
-      null,
-      null,
-      "Sunflower",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, null, "Sunflower", null, null, null, null],
     "shapeless": false
   },
   {
@@ -11915,17 +8773,7 @@
   {
     "item": "Yellow Wool",
     "quantity": 1,
-    "recipe": [
-      null,
-      null,
-      null,
-      "White Wool",
-      "Yellow Dye",
-      null,
-      null,
-      null,
-      null
-    ],
+    "recipe": [null, null, null, "White Wool", "Yellow Dye", null, null, null, null],
     "shapeless": true
   }
 ]

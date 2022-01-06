@@ -15,10 +15,8 @@ import { Block } from "../types";
 const limit = pLimit(6);
 const blocks = blocksJSON as Block[];
 
-const getTextContent = async (
-  page: puppeteer.Page,
-  element: puppeteer.ElementHandle
-) => await page.evaluate((element) => element.textContent, element);
+const getTextContent = async (page: puppeteer.Page, element: puppeteer.ElementHandle) =>
+  await page.evaluate((element) => element.textContent, element);
 
 const writeBlocks = (blocks: Block[]) => {
   sortByKey(blocks, "name");
@@ -52,11 +50,7 @@ const getItemNameForBlock = (name: string) => {
   };
   const wallPlacements = ["Banner", "Head", "Torch", "Sign", "Fan", "Skull"];
   let itemName = itemNameOverrides[name] ?? name;
-  if (
-    wallPlacements.some((wallPlacement) =>
-      name.endsWith("Wall " + wallPlacement)
-    )
-  ) {
+  if (wallPlacements.some((wallPlacement) => name.endsWith("Wall " + wallPlacement))) {
     wallPlacements.forEach((wallPlacement) => {
       itemName = itemName.replace("Wall " + wallPlacement, wallPlacement);
     });
@@ -73,16 +67,10 @@ const getItemNameForBlock = (name: string) => {
   });
   const dataPage = await browser.newPage();
   console.log("Opening data page...");
-  await dataPage.goto(
-    "https://minecraft.gamepedia.com/Java_Edition_data_values"
-  );
+  await dataPage.goto("https://minecraft.gamepedia.com/Java_Edition_data_values");
   console.log("Data page loaded");
-  await dataPage.waitForSelector(
-    "div[data-page='Java Edition data values/Blocks'] .jslink"
-  );
-  await dataPage.click(
-    "div[data-page='Java Edition data values/Blocks'] .jslink"
-  );
+  await dataPage.waitForSelector("div[data-page='Java Edition data values/Blocks'] .jslink");
+  await dataPage.click("div[data-page='Java Edition data values/Blocks'] .jslink");
   await dataPage.waitForSelector("a[title='Acacia Button']");
   console.log("Blocks table loaded");
   const explosionPage = await browser.newPage();
@@ -92,9 +80,7 @@ const getItemNameForBlock = (name: string) => {
   console.log("Explosion page loaded");
   await Promise.all(
     (
-      await dataPage.$$(
-        "div[data-page='Java Edition data values/Blocks'] .stikitable tbody tr"
-      )
+      await dataPage.$$("div[data-page='Java Edition data values/Blocks'] .stikitable tbody tr")
     ).map((row) =>
       limit(async (row) => {
         const a = await row.$("a[title]");
@@ -102,10 +88,7 @@ const getItemNameForBlock = (name: string) => {
         let blockPage: puppeteer.Page;
         try {
           if (blocks.find((block) => block.name === name)) return;
-          const namespacedId = await getTextContent(
-            dataPage,
-            await row.$("code")
-          );
+          const namespacedId = await getTextContent(dataPage, await row.$("code"));
           let imageName = namespacedId;
           if (["Air", "Cave Air", "Void Air", "Moving Piston"].includes(name)) {
             imageName = "air";
@@ -115,12 +98,10 @@ const getItemNameForBlock = (name: string) => {
               console.log(chalk.red("No image found for block: " + name));
               return;
             }
-            const wikiImageURL = await imageElement.evaluate(
-              (img: HTMLImageElement) => {
-                const src = img.getAttribute("data-src") ?? img.src;
-                return src.replace(/width-down.+/, "width-down/200");
-              }
-            );
+            const wikiImageURL = await imageElement.evaluate((img: HTMLImageElement) => {
+              const src = img.getAttribute("data-src") ?? img.src;
+              return src.replace(/width-down.+/, "width-down/200");
+            });
             if (wikiImageURL) {
               const wikiImage = await Jimp.read(wikiImageURL);
               wikiImage.resize(200, Jimp.AUTO);
@@ -143,10 +124,7 @@ const getItemNameForBlock = (name: string) => {
             waitUntil: "domcontentloaded",
           });
           const description = (
-            await getTextContent(
-              blockPage,
-              await blockPage.$(".mw-parser-output > p")
-            )
+            await getTextContent(blockPage, await blockPage.$(".mw-parser-output > p"))
           )
             .replace(/\[a\]|\n$/g, "")
             .trim();
@@ -315,13 +293,7 @@ const getItemNameForBlock = (name: string) => {
               },
             },
             {
-              blocks: [
-                "Fire",
-                "Lantern",
-                "Redstone Lamp",
-                "Campfire",
-                "Respawn Anchor",
-              ],
+              blocks: ["Fire", "Lantern", "Redstone Lamp", "Campfire", "Respawn Anchor"],
               attributes: {
                 luminance: 15,
               },
@@ -438,15 +410,7 @@ const getItemNameForBlock = (name: string) => {
               },
             },
             {
-              blocks: [
-                "Oak",
-                "Spruce",
-                "Birch",
-                "Jungle",
-                "Acacia",
-                "Crimson",
-                "Warped",
-              ],
+              blocks: ["Oak", "Spruce", "Birch", "Jungle", "Acacia", "Crimson", "Warped"],
               attributes: {
                 blastResistance: 3,
                 flammable: true,
@@ -553,9 +517,7 @@ const getItemNameForBlock = (name: string) => {
 
           const missingAttribute = (attribute: keyof Block) => {
             if (block[attribute] === undefined) {
-              console.log(
-                chalk.red(`Unable to get ${attribute} for block: ` + name)
-              );
+              console.log(chalk.red(`Unable to get ${attribute} for block: ` + name));
               blockPage.close();
               return true;
             }
@@ -564,22 +526,20 @@ const getItemNameForBlock = (name: string) => {
           block.transparent =
             block.transparent ??
             (await blockPage.evaluate(() => {
-              const transparenceRow = [
-                ...document.querySelectorAll(".infobox-rows tr"),
-              ].filter((row) => row.textContent.includes("Transparent"))[0];
+              const transparenceRow = [...document.querySelectorAll(".infobox-rows tr")].filter(
+                (row) => row.textContent.includes("Transparent")
+              )[0];
               const text = transparenceRow.querySelector("p").innerText;
-              return text.length < 10 || text.includes("Partial")
-                ? text !== "No"
-                : undefined;
+              return text.length < 10 || text.includes("Partial") ? text !== "No" : undefined;
             }));
           if (missingAttribute("transparent")) return;
 
           block.luminance =
             block.luminance ??
             (await blockPage.evaluate(() => {
-              const luminanceRow = [
-                ...document.querySelectorAll(".infobox-rows tr"),
-              ].filter((row) => row.textContent.includes("Luminan"))[0];
+              const luminanceRow = [...document.querySelectorAll(".infobox-rows tr")].filter(
+                (row) => row.textContent.includes("Luminan")
+              )[0];
               const text = luminanceRow.querySelector("p").innerText;
               return text.length < 10
                 ? text.includes("Yes")
@@ -592,18 +552,14 @@ const getItemNameForBlock = (name: string) => {
           block.blastResistance =
             block.blastResistance ??
             (await explosionPage.evaluate((blockName) => {
-              let rows = [
-                ...document.querySelectorAll("tbody tr"),
-              ] as HTMLTableRowElement[];
+              let rows = [...document.querySelectorAll("tbody tr")] as HTMLTableRowElement[];
               if (!rows) return undefined;
               rows = rows.filter((row) => {
                 const td = row.querySelector("td");
                 if (!td) return false;
                 return (
                   td.innerText.length > 0 &&
-                  blockName.includes(
-                    td.innerText.substring(0, td.innerText.length - 1)
-                  )
+                  blockName.includes(td.innerText.substring(0, td.innerText.length - 1))
                 );
               });
               if (rows.length === 0) return undefined;
@@ -622,10 +578,8 @@ const getItemNameForBlock = (name: string) => {
           block.blastResistance =
             block.blastResistance ??
             (await blockPage.evaluate(() => {
-              const blastResistanceRow = [
-                ...document.querySelectorAll(".infobox-rows tr"),
-              ].filter((row: HTMLTableRowElement) =>
-                row.innerText.includes("Blast resistance")
+              const blastResistanceRow = [...document.querySelectorAll(".infobox-rows tr")].filter(
+                (row: HTMLTableRowElement) => row.innerText.includes("Blast resistance")
               )[0];
               const text = blastResistanceRow.querySelector("p").innerText;
               return text.length < 10 ? parseFloat(text) : undefined;
@@ -635,35 +589,22 @@ const getItemNameForBlock = (name: string) => {
           block.flammable =
             block.flammable ??
             (await blockPage.evaluate(() => {
-              const flammableRow = [
-                ...document.querySelectorAll(".infobox-rows tr"),
-              ].filter((row: HTMLTableRowElement) =>
-                row.innerText.includes("Flammable")
+              const flammableRow = [...document.querySelectorAll(".infobox-rows tr")].filter(
+                (row: HTMLTableRowElement) => row.innerText.includes("Flammable")
               )[0];
               const text = flammableRow.querySelector("p").innerText;
-              return /(Yes)|(No)(\(\d+\))?/.test(text)
-                ? text.includes("Yes")
-                : undefined;
+              return /(Yes)|(No)(\(\d+\))?/.test(text) ? text.includes("Yes") : undefined;
             }));
           if (missingAttribute("flammable")) return;
 
           if (block.tool === undefined) {
             // MULTIPLE TOOL TYPES RETURNS UNDEFINED
             block.tool = (await blockPage.evaluate(() => {
-              const toolRow = [
-                ...document.querySelectorAll(".infobox-rows tr"),
-              ].filter((row: HTMLTableRowElement) =>
-                row.innerText.includes("Tool")
+              const toolRow = [...document.querySelectorAll(".infobox-rows tr")].filter(
+                (row: HTMLTableRowElement) => row.innerText.includes("Tool")
               )[0];
               const tools = [...toolRow.querySelectorAll("a")];
-              const allTools = [
-                "Pickaxe",
-                "Hoe",
-                "Axe",
-                "Shovel",
-                "Sword",
-                "Shears",
-              ];
+              const allTools = ["Pickaxe", "Hoe", "Axe", "Shovel", "Sword", "Shears"];
               return tools.length === 0
                 ? null
                 : tools.length > 1 || !allTools.includes(tools[0].title)
@@ -679,9 +620,10 @@ const getItemNameForBlock = (name: string) => {
 
           try {
             block.colors = (
-              palette.bins(
-                (await pixels(`public/blocks/${imageName}.png`)).data
-              ) as { color: number[]; amount: number }[]
+              palette.bins((await pixels(`public/blocks/${imageName}.png`)).data) as {
+                color: number[];
+                amount: number;
+              }[]
             )
               .map(({ color, amount }) => ({
                 color,
@@ -689,9 +631,7 @@ const getItemNameForBlock = (name: string) => {
               }))
               .filter((color) => color.amount > 0.01);
           } catch (e) {
-            console.log(
-              chalk.red("Error when getting block colors for: " + block.name)
-            );
+            console.log(chalk.red("Error when getting block colors for: " + block.name));
             await blockPage.close();
             return;
           }
