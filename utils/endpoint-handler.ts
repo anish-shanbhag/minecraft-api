@@ -14,21 +14,27 @@ export async function endpointHandler<T extends ZodTypeAny>(
         errorMap(issue, ctx) {
           const parameter = issue.path[0];
           if (parameter) {
-            const prefix = `Query parameter "${parameter}" must be`;
+            const prefix = `Query parameter "${parameter}" must `;
             if (issue.code === ZodIssueCode.invalid_type) {
               return {
                 message:
                   prefix +
-                  ` of type ${issue.expected}, but received a value of type ${issue.received} instead.`,
+                  `be of type ${issue.expected}, but received a value of type ${issue.received} instead.`,
               };
             } else if (issue.code === ZodIssueCode.invalid_enum_value) {
+              const options = ` the following: ${issue.options.join(", ")}.`;
+              if (issue.path[1]) {
+                return {
+                  message: prefix + "contain a combination of only" + options,
+                };
+              }
               return {
-                message: prefix + ` one of the following: ${issue.options.join(", ")}.`,
+                message: prefix + "be one of" + options,
               };
             } else if (issue.message === "invalid_boolean") {
               // overriding the message doesn't work here for some reason
               // might be because the message was already overridden
-              throw createHttpError(400, prefix + " of type boolean.");
+              throw createHttpError(400, prefix + "be of type boolean.");
             } else {
               return {
                 message:
