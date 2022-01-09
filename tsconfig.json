@@ -11,5 +11,5 @@
     "baseUrl": ".",
     "lib": ["es2020", "dom", "dom.iterable"]
   },
-  "include": ["scripts/**/*", "api/**/*", "types/**/*"]
+  "include": ["scripts/**/*", "api/**/*", "types/**/*", "utils/**/*"]
 }

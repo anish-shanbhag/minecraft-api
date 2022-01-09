@@ -8,7 +8,7 @@ import pixels from "image-pixels";
 // @ts-ignore
 import palette from "get-rgba-palette";
 
-import { sortByKey } from "./utils";
+import { sortByKey } from "../utils";
 import blocksJSON from "../data/blocks.json";
 import { Block } from "../types";
 

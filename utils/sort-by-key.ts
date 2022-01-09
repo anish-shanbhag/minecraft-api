@@ -1,5 +1,5 @@
-export const sortByKey = (array: any[], key: string) => {
+export function sortByKey(array: any[], key: string) {
   array.sort((a, b) => {
     return a[key] < b[key] ? -1 : a[key] > b[key] ? 1 : 0;
   });
-};
+}

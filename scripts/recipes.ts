@@ -4,7 +4,7 @@ import chalk from "chalk";
 
 import { CraftingRecipe, Item } from "../types";
 import itemsJSON from "../data/items.json";
-import { sortByKey } from "./utils";
+import { sortByKey } from "../utils";
 
 (async () => {
   const browser = await puppeteer.launch({

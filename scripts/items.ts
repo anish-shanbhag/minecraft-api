@@ -7,7 +7,7 @@ import https from "https";
 
 import { Item } from "../types";
 import itemsJSON from "../data/items.json";
-import { sortByKey } from "./utils";
+import { sortByKey } from "../utils";
 
 const items: Item[] = itemsJSON;
 let names = items.map((item) => item.name);
