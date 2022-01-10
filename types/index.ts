@@ -19,7 +19,7 @@ export interface Block {
   luminance: number;
   blastResistance: number;
   colors: {
-    color: number[];
+    color: [number, number, number];
     amount: number;
   }[];
 }

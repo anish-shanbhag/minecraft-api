@@ -1,10 +1,10 @@
 import { VercelRequest, VercelResponse } from "@vercel/node";
 import createHttpError from "http-errors";
 import qs from "qs";
-import { z, ZodEffects, ZodIssueCode, ZodType, ZodTypeAny } from "zod";
+import { z, ZodIssueCode, ZodTypeAny } from "zod";
 
 export async function endpointHandler<T extends ZodTypeAny>(
-  schema: ZodType<T> | ZodEffects<T>,
+  schema: T,
   handler: (query: z.infer<T>) => any
 ) {
   return async function (req: VercelRequest, res: VercelResponse) {
@@ -48,12 +48,11 @@ export async function endpointHandler<T extends ZodTypeAny>(
       res.json(await handler(parsedQuery));
     } catch (e) {
       if (e.issues) {
-        console.log(e.issues[0]);
-
         res.status(400).send(e.issues[0].message);
       } else if (e.status) {
         res.status(e.status).send(e.message);
       } else {
+        console.error(e);
         res.status(500).send("An unexpected server error has occurred.");
       }
     }
