@@ -94,7 +94,7 @@ const writeItems = (items: Item[]) => {
           await itemPage.goto(url, { timeout: 0 });
           await itemPage.waitForSelector(".invslot-item");
           const imageName = name.startsWith("Banner Pattern") ? "banner_pattern" : namespacedId;
-          let image = `https://minecraft-api.s3.amazonaws.com/public/items/${imageName}.png`;
+          let image = `https://minecraft-api.vercel.app/items/${imageName}.png`;
 
           try {
             const imageDetails = await itemPage.evaluate(
@@ -379,7 +379,7 @@ const writeItems = (items: Item[]) => {
           if (names.includes(name)) return;
           const imageName =
             page === "Music_Disc" ? updatedNamespacedId : name.toLowerCase().replace(/ /g, "_");
-          const image = `https://minecraft-api.s3.amazonaws.com/public/items/${imageName}.${
+          const image = `https://minecraft-api.vercel.app/items/${imageName}.${
             gifURL ? "gif" : "png"
           }`;
           if (gifURL) {

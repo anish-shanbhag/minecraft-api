@@ -108,7 +108,7 @@ const getItemNameForBlock = (name: string) => {
               wikiImage.write("public/blocks/" + namespacedId + ".png");
             }
           }
-          let image = `https://minecraft-api.s3.amazonaws.com/public/blocks/${imageName}.png`;
+          let image = `https://minecraft-api.vercel.app/blocks/${imageName}.png`;
 
           let item = null;
           const itemName = getItemNameForBlock(name);
@@ -621,7 +621,7 @@ const getItemNameForBlock = (name: string) => {
           try {
             block.colors = (
               palette.bins((await pixels(`public/blocks/${imageName}.png`)).data) as {
-                color: number[];
+                color: [number, number, number];
                 amount: number;
               }[]
             )
