@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: Minecraft API
-  version: "1.0"
+  version: "2.0"
   license:
     name: MIT
   description: ""
@@ -9,7 +9,7 @@ info:
     name: Anish Shanbhag
     url: "https://github.com/anish-shanbhag"
 servers:
-  - url: "https://i8xla88513.execute-api.us-east-1.amazonaws.com/latest"
+  - url: "https://minecraft-api.vercel.app/api"
 paths:
   /items:
     get:
@@ -32,9 +32,8 @@ paths:
           description: Allows for pagination of this query. You must pass the `limit` parameter if using this parameter as well. You can think of this as dividing the items into pages of length `limit` and returning the `page`th one.
         - schema:
             type: string
-            default: itemId
+            default: item
             enum:
-              - itemId
               - name
               - namespacedId
               - description
@@ -83,9 +82,6 @@ paths:
                 items:
                   type: object
                   properties:
-                    itemId:
-                      type: number
-                      description: "The numerical ID of this item. Useful for getting specific items with /items/{item}. Does not correspond with any in game numerical IDs."
                     name:
                       type: string
                       description: The name of the item.
@@ -104,98 +100,33 @@ paths:
               examples:
                 Example 1:
                   value:
-                    - itemId: 1
-                      name: Acacia Boat
+                    - name: Acacia Boat
                       namespacedId: acacia_boat
                       description: A boat is both an item and a vehicle entity.
-                      image: "https://minecraft-api.s3.amazonaws.com/items/acacia_boat.png"
-                      stackSize: 1
-                    - itemId: 2
-                      name: Acacia Button
+                      image: "https://minecraft-api.vercel.app/images/items/acacia_boat.png"
+                      stackSize: 1,
+                      renewable: true
+                    - name: Acacia Button
                       namespacedId: acacia_button
                       description: A button is a non-solid block that can provide temporary redstone power.
-                      image: "https://minecraft-api.s3.amazonaws.com/items/acacia_button.png"
-                      stackSize: 64
+                      image: "https://minecraft-api.vercel.app/images/items/acacia_button.png"
+                      stackSize: 64,
+                      renewable: true
                 Example 2:
                   value:
                     - name: Fishing Rod
                       description: A fishing rod is a tool used primarily for fishing.
-                      image: "https://minecraft-api.s3.amazonaws.com/items/fishing_rod.png"
+                      image: "https://minecraft-api.vercel.app/images/items/fishing_rod.png"
                     - name: Fletching Table
-                      description: "A fletching table is a fletcher's job site block that can generate naturally in villages."
-                      image: "https://minecraft-api.s3.amazonaws.com/items/fletching_table.png"
+                      description: A fletching table is a fletcher's job site block that can generate naturally in villages.
+                      image: "https://minecraft-api.vercel.app/images/items/fletching_table.png"
                     - name: Flint
                       description: Flint is a mineral obtained from gravel.
-                      image: "https://minecraft-api.s3.amazonaws.com/items/flint.png"
+                      image: "https://minecraft-api.vercel.app/images/items/flint.png"
         "400":
           description: Bad Request - sent when you pass the `page` parameter but not the `limit` parameter.
         "500":
           description: "Internal Server Error - usually sent when you pass invalid fields for the `sort` or `fields` parameters, but it could also indicate a different server error as well."
-  "/items/{item}":
-    get:
-      summary: Get a Specific Item
-      tags:
-        - Endpoints
-      responses:
-        "200":
-          description: OK - sent when the request was processed successfully. The body will contain the item object.
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  stackSize:
-                    type: number
-                    description: "The maximum number of this item which can fit in a single stack of the player's inventory. Can be 1, 16, or 64."
-                  image:
-                    type: string
-                    description: "A link to a 16x16 image of the item, which is usually displayed inside the player's inventory."
-                  description:
-                    type: string
-                    description: A short description of the item and its uses. Certain items that fall under a common category share a single description.
-                  namespacedId:
-                    type: string
-                    description: "The namespaced ID of this item, which is used to identify the item in game when using commands."
-                  name:
-                    type: string
-                    description: The name of the item.
-                  itemId:
-                    type: number
-                    description: "The numerical ID of this item. Useful for getting specific items with /items/{item}. Does not correspond with any in game numerical IDs."
-              examples:
-                Example 1:
-                  value:
-                    itemId: 23
-                    name: Apple
-                    namespacedId: apple
-                    description: Apples are food items that can be eaten by the player.
-                    image: "https://minecraft-api.s3.amazonaws.com/items/apple.png"
-                    stackSize: 64
-                Example 2:
-                  value:
-                    name: Enchanting Table
-                    description: "An enchanting table is a block that allows players to spend their experience point levels to enchant tools, weapons, books and armor."
-                    stackSize: 64
-        "404":
-          description: "Not Found - sent when no item was found with the `itemId`, `name`, or `namespacedId` in the path."
-        "500":
-          description: "Internal Server Error - usually sent when you pass invalid fields for the `fields` parameter, but it could also indicate a different server error as well."
-      operationId: "get-items-:item"
-      description: "Get a specific Minecraft item based on its `itemId`, `name`, or `namespacedId`."
-      parameters:
-        - schema:
-            default: "*"
-          in: query
-          name: fields
-          description: "The fields of the item object to include in the response. Passing an array of strings results in all of those fields being included, while passing only a string results in only that single field being included. If you don't pass any value for this parameter, then all fields are included."
-      requestBody: {}
-    parameters:
-      - schema:
-          type: string
-        name: item
-        in: path
-        required: true
-        description: "Can be either an `itemId`, a `name` of an item,  or a `namespacedId` of an item."
   /blocks:
     get:
       summary: Get Blocks
@@ -211,9 +142,6 @@ paths:
                 items:
                   type: object
                   properties:
-                    blockId:
-                      type: number
-                      description: "The numerical ID of this block. Useful for getting specific blocks with /blocks/{block}. Does not correspond with any in game numerical IDs."
                     name:
                       type: string
                       description: The name of the block.
@@ -226,9 +154,6 @@ paths:
                     image:
                       type: string
                       description: "A link to an image of the block. Image sizes can vary between blocks, but most are 200x200 or smaller. Not all blocks have an image (e.g. Air)."
-                    itemId:
-                      type: number
-                      description: "The `itemId` associated with the item that this block   is represented by when in the inventory. You can get more information about the item by using the `/items/{item}` endpoint. Since some blocks don't have corresponding items, this field can be `null`."
                     transparent:
                       type: boolean
                       description: Whether this block is considered transparent by the game (does not necessarily correspond to the block being see-through).
@@ -244,57 +169,45 @@ paths:
                     tool:
                       type: string
                       description: The tool which breaks this block the fastest.
-                    requiresTool:
-                      type: boolean
-                      description: "Whether or not this block needs to broken by its corresponding `tool` in order to drop block loot. Block loot can be either the block's corresponding item itself, or some other item, such as a Diamond in the case of Diamond Ore."
-                    requiresSilkTouch:
-                      type: boolean
-                      description: "Whether the Silk Touch enchantment is required to drop this block's corresponding item as block loot. For example, `requiresSilkTouch` is `false` for Dirt because mining Dirt causes the Dirt item to drop. But, `requiresSilkTouch` is `true` for Grass Block because mining a Grass Block causes a Dirt item to drop, not a Grass Block item."
               examples:
                 Example 1:
                   value:
-                    - blockId: 23
-                      name: Anvil
+                    - name: Anvil
                       namespacedId: anvil
                       description: "An anvil is a block that allows players to repair items, rename items, and combine enchantments."
-                      image: "https://minecraft-api.s3.amazonaws.com/blocks/anvil.png"
-                      itemId: 22
+                      image: "https://minecraft-api.vercel.app/images/blocks/anvil.png"
+                      item: "Anvil"
                       transparent: true
                       luminance: 0
                       blastResistance: 1200
                       flammable: false
                       tool: Pickaxe
-                      requiresTool: true
-                      requiresSilkTouch: false
-                    - blockId: 24
-                      name: Attached Melon Stem
+                    - name: Attached Melon Stem
                       namespacedId: attached_melon_stem
                       description: Melon seeds are an item that can be used to grow melon plants.
-                      image: "https://minecraft-api.s3.amazonaws.com/blocks/attached_melon_stem.png"
-                      itemId: null
+                      image: "https://minecraft-api.vercel.app/images/blocks/attached_melon_stem.png"
+                      item: null
                       transparent: true
                       luminance: 0
                       blastResistance: 2
                       flammable: false
                       tool: Axe
-                      requiresTool: false
-                      requiresSilkTouch: false
                 Example 2:
                   value:
                     - name: Tall Grass
-                      image: "https://minecraft-api.s3.amazonaws.com/blocks/tall_grass.png"
+                      image: "https://minecraft-api.vercel.app/images/blocks/tall_grass.png"
                       luminance: 0
                       blastResistance: 0
                     - name: Tall Seagrass
-                      image: "https://minecraft-api.s3.amazonaws.com/blocks/tall_seagrass.png"
+                      image: "https://minecraft-api.vercel.app/images/blocks/tall_seagrass.png"
                       luminance: 0
                       blastResistance: 0
                     - name: Terracotta
-                      image: "https://minecraft-api.s3.amazonaws.com/blocks/terracotta.png"
+                      image: "https://minecraft-api.vercel.app/images/blocks/terracotta.png"
                       luminance: 0
                       blastResistance: 4.2
                     - name: Torch
-                      image: "https://minecraft-api.s3.amazonaws.com/blocks/torch.png"
+                      image: "https://minecraft-api.vercel.app/images/blocks/torch.png"
                       luminance: 14
                       blastResistance: 0
         "400":
@@ -320,21 +233,17 @@ paths:
           description: Allows for pagination of this query. You must pass the `limit` parameter if using this parameter as well. You can think of this as dividing the blocks into pages of length `limit` and returning the `page`th one.
         - schema:
             type: string
-            default: blockId
+            default: name
             enum:
-              - blockId
               - name
               - namespacedId
               - description
               - image
-              - itemId
               - transparent
               - luminance
               - blastResistance
               - flammable
               - tool
-              - requiresTool
-              - requiresSilkTouch
           in: query
           name: sort
           description: Sorts the blocks by this field.
@@ -432,109 +341,6 @@ paths:
           in: query
           name: tool
           description: Filters the blocks by including only those with a certain value for the `tool` field.
-        - schema:
-            type: boolean
-          in: query
-          name: requiresTool
-          description: Filters the blocks by including only those with a certain value for the `requiresTool` field.
-        - schema:
-            type: boolean
-          in: query
-          name: requiresSilkTouch
-          description: Filters the blocks by including only those with a certain value for the `requiresSilkTouch` field.
-      requestBody: {}
-  "/blocks/{block}":
-    parameters:
-      - schema:
-          type: string
-        name: block
-        in: path
-        required: true
-        description: "Can be either a `blockId`, a `name` of a block,  or a `namespacedId` of a block."
-    get:
-      summary: Get a Specific Block
-      tags:
-        - Endpoints
-      responses:
-        "200":
-          description: OK - sent when the request was processed successfully. The body will contain the block object.
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  requiresSilkTouch:
-                    type: boolean
-                    description: "Whether the Silk Touch enchantment is required to drop this block's corresponding item as block loot. For example, `requiresSilkTouch` is `false` for Dirt because mining Dirt causes the Dirt item to drop. But, `requiresSilkTouch` is `true` for Grass Block because mining a Grass Block causes a Dirt item to drop, not a Grass Block item."
-                  requiresTool:
-                    type: boolean
-                    description: "Whether or not this block needs to broken by its corresponding `tool` in order to drop block loot. Block loot can be either the block's corresponding item itself, or some other item, such as a Diamond in the case of Diamond Ore."
-                  tool:
-                    type: string
-                    description: The tool which breaks this block the fastest.
-                  flammable:
-                    type: boolean
-                    description: Whether or not this block can catch fire from nearby blocks. Flammable blocks can also be destroyed after they burn for some time.
-                  blastResistance:
-                    type: number
-                    description: A measure of how well this block withstands explosions. Higher values mean that it takes a stronger explosion to destroy the block.
-                  luminance:
-                    type: number
-                    description: "The amount of light that this block gives off. Higher values mean brighter blocks. Some blocks give off different amounts of light in various situations; in those cases, the `luminance` represents the maximum amount of light the block can emit."
-                  transparent:
-                    type: boolean
-                    description: Whether this block is considered transparent by the game (does not necessarily correspond to the block being see-through).
-                  itemId:
-                    type: number
-                    description: "The `itemId` associated with the item that this block   is represented by when in the inventory. You can get more information about the item by using the `/items/{item}` endpoint. Since some blocks don't have corresponding items, this field can be `null`."
-                  image:
-                    type: string
-                    description: "A link to an image of the block. Image sizes can vary between blocks, but most are 200x200 or smaller."
-                  description:
-                    type: string
-                    description: A short description of the block and its uses. Certain blocks that fall under a common category share a single description.
-                  namespacedId:
-                    type: string
-                    description: "The namespaced ID of this block, which is used to identify the block in game when using commands."
-                  name:
-                    type: string
-                    description: The name of the block.
-                  blockId:
-                    type: number
-                    description: "The numerical ID of this block. Useful for getting specific blocks with /blocks/{block}. Does not correspond with any in game numerical IDs."
-              examples:
-                Example 1:
-                  value:
-                    blockId: 155
-                    name: Cyan Bed
-                    namespacedId: cyan_bed
-                    description: "A bed is a block that allows a player to sleep and to reset their spawn point to within a few blocks of the bed in the Overworld. If the bed is obstructed, the player spawns at the default world spawning location."
-                    image: "https://minecraft-api.s3.amazonaws.com/blocks/cyan_bed.png"
-                    itemId: 226
-                    transparent: true
-                    luminance: 0
-                    blastResistance: 0.2
-                    flammable: false
-                    tool: null
-                    requiresTool: false
-                    requiresSilkTouch: false
-                Example 2:
-                  value:
-                    name: Cobblestone
-                    image: "https://minecraft-api.s3.amazonaws.com/blocks/cobblestone.png"
-                    tool: Pickaxe
-        "404":
-          description: "Not Found - sent when no block was found with the `blockId`, `name`, or `namespacedId` in the path."
-        "500":
-          description: "Internal Server Error - usually sent when you pass invalid fields for the `fields` parameter, but it could also indicate a different server error as well."
-      operationId: get-blocks-block
-      description: "Get a specific Minecraft block based on its `blockId`, `name`, or `namespacedId`."
-      parameters:
-        - schema:
-            example: "name,image,blastResistance"
-          in: query
-          name: fields
-          description: "The fields of the block object to include in the response. Passing an array of strings results in all of those fields being included, while passing only a string results in only that single field being included. If you don't pass any value for this parameter, then all fields are included."
       requestBody: {}
   /crafting-recipes:
     get:
@@ -551,34 +357,9 @@ paths:
                 items:
                   type: object
                   properties:
-                    craftingRecipeId:
-                      type: number
-                      description: "The numerical ID of this crafting recipe. Useful for getting specific crafting recipes with /crafting-recipes/{craftingRecipeId}. Does not correspond with any in game numerical IDs."
-                    itemId:
-                      type: number
-                      description: The `itemId` corresponding to the item which this crafting recipe produces. This field is only included when the `itemFields` parameter is not passed.
                     item:
                       type: object
-                      description: "An item object representing the item which this recipe produces. This field is only included if the `itemFields` parameter is passed, and only the fields in `itemFields` are included in the object."
-                      properties:
-                        itemId:
-                          type: number
-                          description: "The numerical ID of this item. Useful for getting specific items with /items/{item}. Does not correspond with any in game numerical IDs."
-                        name:
-                          type: string
-                          description: The name of the item.
-                        namespacedId:
-                          type: string
-                          description: "The namespaced ID of this item, which is used to identify the item in game when using commands."
-                        description:
-                          type: string
-                          description: A short description of the item and its uses. Certain items that fall under a common category share a single description.
-                        image:
-                          type: string
-                          description: "A link to a 16x16 image of the item, which is usually displayed inside the player's inventory."
-                        stackSize:
-                          type: number
-                          description: "The maximum number of this item which can fit in a single stack of the player's inventory. Can be 1, 16, or 64."
+                      description: "The name of the item which this recipe produces."
                     quantity:
                       type: number
                       description: The number of items which are produced from this recipe.
@@ -588,124 +369,27 @@ paths:
                     recipe:
                       type:
                         - array
-                      description: "An array of eight elements each representing one slot of the crafting grid, from left to right and top to bottom."
+                      description: "An array of eight elements each representing one slot of the crafting grid, from left to right and top to bottom (like a book)."
                       items:
                         oneOf:
                           - type: "null"
                             description: A null value represents no item in that slot of the crafting grid.
                           - type: string
-                            description: "A crafting grid slot may contain a string if you pass a single field for the `itemFields` parameter that has a string value, such as `name`, `description`, `namespacedId`, or `image`."
-                          - type: number
-                            description: |-
-                              A crafting grid slot may contain a number if either:
-                              a) You don't pass the `itemFields` parameter - in this case, the number represents an `itemId` of an item.
-                              b) You pass the `itemFields` parameter but only include one numerical field, such as `itemId` or `stackSize`.
-                          - type: object
-                            description: A crafting grid slot may contain an object representing an item  if you pass multiple fields for the `itemFields` parameter.
-                            properties:
-                              itemId:
-                                type: number
-                                description: "The numerical ID of this item. Useful for getting specific items with /items/{item}. Does not correspond with any in game numerical IDs."
-                              name:
-                                type: string
-                                description: The name of the item.
-                              namespacedId:
-                                type: string
-                                description: "The namespaced ID of this item, which is used to identify the item in game when using commands."
-                              description:
-                                type: string
-                                description: A short description of the item and its uses. Certain items that fall under a common category share a single description.
-                              image:
-                                type: string
-                                description: "A link to a 16x16 image of the item, which is usually displayed inside the player's inventory."
-                              stackSize:
-                                type: number
-                                description: "The maximum number of this item which can fit in a single stack of the player's inventory. Can be 1, 16, or 64."
+                            description: "The `name` of an item which needs to be in that slot."
                           - type: array
-                            description: "In certain recipes, you can use substitute different ingredients in a slot while still crafting the same item. For example, to craft a Note Block, you can use any wood plank type in each slot around the Redstone Dust, and you will still get a Note Block. In cases such as these, an array is used in place of an item object/item field in one of the crafting grid slots. The array represents all of the possible ingredients which can be substituted for each other in that slot. The format of the items in the array is the exact same as the format of the items in the recipe array - they can be null, a string, a number, or an item object."
+                            description: "In certain recipes, you can use substitute different ingredients in a slot while still crafting the same item. For example, to craft a Note Block, you can use any wood plank type in each slot around the Redstone Dust, and you will still get a Note Block. In cases such as these, an array is used in place of an item string in one of the crafting grid slots. The array represents all of the possible ingredients which can be substituted for each other in that slot."
                             items:
                               oneOf:
                                 - type: "null"
                                   description: A `null` value represents no item in that slot of the crafting grid.
                                 - type: string
-                                  description: "A crafting grid slot may contain a string if you pass a single field for the `itemFields` parameter that has a string value, such as `name`, `description`, `namespacedId`, or `image`."
-                                - type: number
-                                  description: |-
-                                    A crafting grid slot may contain a number if either:
-                                    a) You don't pass the `itemFields` parameter - in this case, the number represents an `itemId` of an item.
-                                    b) You pass the `itemFields` parameter but only include one numerical field, such as `itemId` or `stackSize`.
-                                - type: object
-                                  description: A crafting grid slot may contain an object representing an item  if you pass multiple fields for the `itemFields` parameter.
-                                  properties:
-                                    itemId:
-                                      type: number
-                                      description: "The numerical ID of this item. Useful for getting specific items with /items/{item}. Does not correspond with any in game numerical IDs."
-                                    name:
-                                      type: string
-                                      description: The name of the item.
-                                    namespacedId:
-                                      type: string
-                                      description: "The namespaced ID of this item, which is used to identify the item in game when using commands."
-                                    description:
-                                      type: string
-                                      description: A short description of the item and its uses. Certain items that fall under a common category share a single description.
-                                    image:
-                                      type: string
-                                      description: "A link to a 16x16 image of the item, which is usually displayed inside the player's inventory."
-                                    stackSize:
-                                      type: number
-                                      description: "The maximum number of this item which can fit in a single stack of the player's inventory. Can be 1, 16, or 64."
+                                  description: "The `name` of an item which needs to be in that slot."
               examples:
-                "Example 1 - limit = 3 , page = 17":
+                Example 1:
                   value:
-                    - craftingRecipeId: 49
-                      itemId: 77
-                      quantity: 3
-                      shapeless: false
-                      recipe:
-                        - 74
-                        - 74
-                        - 74
-                        - 74
-                        - 74
-                        - 74
-                        - null
-                        - 870
-                        - null
-                    - craftingRecipeId: 50
-                      itemId: 78
-                      quantity: 6
-                      shapeless: false
-                      recipe:
-                        - null
-                        - null
-                        - null
-                        - null
-                        - null
-                        - null
-                        - 74
-                        - 74
-                        - 74
-                    - craftingRecipeId: 51
-                      itemId: 79
-                      quantity: 4
-                      shapeless: false
-                      recipe:
-                        - 74
-                        - null
-                        - null
-                        - 74
-                        - 74
-                        - null
-                        - 74
-                        - 74
-                        - 74
-                'Example 2 - itemFields = "name"':
-                  value:
-                    - craftingRecipeId: 97
+                    - item: Bone Meal
                       quantity: 9
                       shapeless: false
-                      item: Bone Meal
                       recipe:
                         - null
                         - null
@@ -716,10 +400,9 @@ paths:
                         - null
                         - null
                         - null
-                    - craftingRecipeId: 98
+                    - item: Book
                       quantity: 1
                       shapeless: true
-                      item: Book
                       recipe:
                         - null
                         - null
@@ -730,10 +413,9 @@ paths:
                         - Paper
                         - Leather
                         - null
-                    - craftingRecipeId: 99
+                    - item: Book and Quill
                       quantity: 1
                       shapeless: true
-                      item: Book and Quill
                       recipe:
                         - null
                         - null
@@ -744,10 +426,9 @@ paths:
                         - null
                         - Feather
                         - null
-                    - craftingRecipeId: 100
+                    - item: Bookshelf
                       quantity: 1
                       shapeless: false
-                      item: Bookshelf
                       recipe:
                         - - Oak Planks
                           - Spruce Planks
@@ -788,12 +469,11 @@ paths:
                           - Jungle Planks
                           - Acacia Planks
                           - Dark Oak Planks
-                'Example 3 - item = "Composter", itemFields = "name"':
+                'Example 2 - item = "Composter"':
                   value:
-                    - craftingRecipeId: 148
+                    - item: Composter
                       quantity: 1
                       shapeless: false
-                      item: Composter
                       recipe:
                         - Oak Slab
                         - null
@@ -804,10 +484,9 @@ paths:
                         - Oak Slab
                         - Oak Slab
                         - Oak Slab
-                    - craftingRecipeId: 149
+                    - item: Composter
                       quantity: 1
                       shapeless: false
-                      item: Composter
                       recipe:
                         - Spruce Slab
                         - null
@@ -818,10 +497,9 @@ paths:
                         - Spruce Slab
                         - Spruce Slab
                         - Spruce Slab
-                    - craftingRecipeId: 150
+                    - item: Composter
                       quantity: 1
                       shapeless: false
-                      item: Composter
                       recipe:
                         - Acacia Slab
                         - null
@@ -832,10 +510,9 @@ paths:
                         - Acacia Slab
                         - Acacia Slab
                         - Acacia Slab
-                    - craftingRecipeId: 151
+                    - item: Composter
                       quantity: 1
                       shapeless: false
-                      item: Composter
                       recipe:
                         - Dark Oak Slab
                         - null
@@ -846,10 +523,9 @@ paths:
                         - Dark Oak Slab
                         - Dark Oak Slab
                         - Dark Oak Slab
-                    - craftingRecipeId: 152
+                    - item: Composter
                       quantity: 1
                       shapeless: false
-                      item: Composter
                       recipe:
                         - Birch Slab
                         - null
@@ -860,10 +536,9 @@ paths:
                         - Birch Slab
                         - Birch Slab
                         - Birch Slab
-                    - craftingRecipeId: 153
+                    - item: Composter
                       quantity: 1
                       shapeless: false
-                      item: Composter
                       recipe:
                         - Jungle Slab
                         - null
@@ -874,150 +549,7 @@ paths:
                         - Jungle Slab
                         - Jungle Slab
                         - Jungle Slab
-                'Example 4 - uses = "Stone", itemFields = ["itemId", "name"]':
-                  value:
-                    - craftingRecipeId: 575
-                      quantity: 1
-                      shapeless: false
-                      item:
-                        itemId: 778
-                        name: Redstone Comparator
-                      recipe:
-                        - null
-                        - itemId: 783
-                          name: Redstone Torch
-                        - null
-                        - itemId: 783
-                          name: Redstone Torch
-                        - itemId: 604
-                          name: Nether Quartz
-                        - itemId: 783
-                          name: Redstone Torch
-                        - itemId: 872
-                          name: Stone
-                        - itemId: 872
-                          name: Stone
-                        - itemId: 872
-                          name: Stone
-                    - craftingRecipeId: 578
-                      quantity: 1
-                      shapeless: false
-                      item:
-                        itemId: 782
-                        name: Redstone Repeater
-                      recipe:
-                        - null
-                        - null
-                        - null
-                        - itemId: 783
-                          name: Redstone Torch
-                        - itemId: 779
-                          name: Redstone Dust
-                        - itemId: 783
-                          name: Redstone Torch
-                        - itemId: 872
-                          name: Stone
-                        - itemId: 872
-                          name: Stone
-                        - itemId: 872
-                          name: Stone
-                    - craftingRecipeId: 623
-                      quantity: 4
-                      shapeless: false
-                      item:
-                        itemId: 877
-                        name: Stone Bricks
-                      recipe:
-                        - null
-                        - null
-                        - null
-                        - itemId: 872
-                          name: Stone
-                        - itemId: 872
-                          name: Stone
-                        - null
-                        - itemId: 872
-                          name: Stone
-                        - itemId: 872
-                          name: Stone
-                        - null
-                    - craftingRecipeId: 624
-                      quantity: 1
-                      shapeless: false
-                      item:
-                        itemId: 878
-                        name: Stone Button
-                      recipe:
-                        - null
-                        - null
-                        - null
-                        - null
-                        - itemId: 872
-                          name: Stone
-                        - null
-                        - null
-                        - null
-                        - null
-                    - craftingRecipeId: 629
-                      quantity: 1
-                      shapeless: false
-                      item:
-                        itemId: 881
-                        name: Stone Pressure Plate
-                      recipe:
-                        - null
-                        - null
-                        - null
-                        - itemId: 872
-                          name: Stone
-                        - itemId: 872
-                          name: Stone
-                        - null
-                        - null
-                        - null
-                        - null
-                    - craftingRecipeId: 632
-                      quantity: 6
-                      shapeless: false
-                      item:
-                        itemId: 883
-                        name: Stone Slab
-                      recipe:
-                        - null
-                        - null
-                        - null
-                        - null
-                        - null
-                        - null
-                        - itemId: 872
-                          name: Stone
-                        - itemId: 872
-                          name: Stone
-                        - itemId: 872
-                          name: Stone
-                    - craftingRecipeId: 633
-                      quantity: 4
-                      shapeless: false
-                      item:
-                        itemId: 884
-                        name: Stone Stairs
-                      recipe:
-                        - itemId: 872
-                          name: Stone
-                        - null
-                        - null
-                        - itemId: 872
-                          name: Stone
-                        - itemId: 872
-                          name: Stone
-                        - null
-                        - itemId: 872
-                          name: Stone
-                        - itemId: 872
-                          name: Stone
-                        - itemId: 872
-                          name: Stone
-                'Example 5 - item = 25, fields = ["itemId", "recipe"],  itemFields = "name"':
+                'Example 5 - item = "Arrow", fields = ["item", "recipe"]':
                   value:
                     - item: Arrow
                       recipe:
@@ -1051,10 +583,9 @@ paths:
           description: Allows for pagination of this query. You must pass the `limit` parameter if using this parameter as well. You can think of this as dividing the crafting recipes into pages of length `limit` and returning the `page`th one.
         - schema:
             type: string
-            default: itemId
+            default: item
             enum:
-              - craftingRecipeId
-              - itemId
+              - item
               - quantity
               - shapeless
           in: query
@@ -1072,9 +603,9 @@ paths:
         - schema:
             default: "*"
             example:
-              - name
-              - image
-              - stackSize
+              - item
+              - shapeless
+              - recipe
             uniqueItems: false
           in: query
           name: fields
@@ -1083,245 +614,11 @@ paths:
             type: string
           in: query
           name: item
-          description: "Filters the crafting recipes by only returning the recipes which produce `item`. Can be either an `itemId`, a `name`, or a `namespacedId` of an item."
+          description: "Filters the crafting recipes by only returning the recipes which produce `item`."
         - schema:
             type: string
           in: query
           name: uses
-          description: "Filters the crafting recipes by only including recipes that uses a certain item as an ingredient. Can be either an `itemId`, a `name`, or a `namespacedId` of an item."
-        - schema: {}
-          in: query
-          name: itemFields
-          description: "If this parameter is passed, then instead of returning `itemId`s in the `itemId` and `recipe` fields, the recipes will have an `item` field with the fields defined in `itemFields`, and the `itemId`s in the `recipe` field will also be replaced by item objects ith the fields defined in `itemFields`. This is essentially equivalent to querying `/items/{item}` for every item found throughout the recipe object. Furthermore, if only one field is included in `itemFields`, then instead of including an item object, just the value of that field will be used in place of the `itemId`s. The valid formats of this field are the same as the valid formats of the `fields` parameter of the `/items/{item}` endpoint."
-  "/crafting-recipes/{craftingRecipeId}":
-    parameters:
-      - schema:
-          type: string
-        name: craftingRecipeId
-        in: path
-        required: true
-        description: The `craftingRecipeId` of a certain crafting recipe.
-    get:
-      summary: Get a Specific Crafting Recipe
-      tags:
-        - Endpoints
-      responses:
-        "200":
-          description: OK - sent when the request was processed successfully. The body will contain the crafting recipe object.
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  craftingRecipeId:
-                    type: number
-                    description: "The numerical ID of this crafting recipe. Useful for getting specific crafting recipes with /crafting-recipes/{craftingRecipeId}. Does not correspond with any in game numerical IDs."
-                  itemId:
-                    type: number
-                    description: The `itemId` corresponding to the item which this crafting recipe produces. This field is only included when the `itemFields` parameter is not passed.
-                  item:
-                    type: object
-                    description: "An item object representing the item which this recipe produces. This field is only included if the `itemFields` parameter is passed, and only the fields in `itemFields` are included in the object."
-                    properties:
-                      itemId:
-                        type: number
-                        description: "The numerical ID of this item. Useful for getting specific items with /items/{item}. Does not correspond with any in game numerical IDs."
-                      name:
-                        type: string
-                        description: The name of the item.
-                      namespacedId:
-                        type: string
-                        description: "The namespaced ID of this item, which is used to identify the item in game when using commands."
-                      description:
-                        type: string
-                        description: A short description of the item and its uses. Certain items that fall under a common category share a single description.
-                      image:
-                        type: string
-                        description: "A link to a 16x16 image of the item, which is usually displayed inside the player's inventory."
-                      stackSize:
-                        type: number
-                        description: "The maximum number of this item which can fit in a single stack of the player's inventory. Can be 1, 16, or 64."
-                  quantity:
-                    type: number
-                    description: The number of items which are produced from this recipe.
-                  shapeless:
-                    type: boolean
-                    description: "Whether or not this recipe is shapeless, meaning that its ingredients can be placed in any order in the crafting grid."
-                  recipe:
-                    type:
-                      - array
-                    description: "An array of eight elements each representing one slot of the crafting grid, from left to right and top to bottom."
-                    items:
-                      oneOf:
-                        - type: "null"
-                          description: A null value represents no item in that slot of the crafting grid.
-                        - type: string
-                          description: "A crafting grid slot may contain a string if you pass a single field for the `itemFields` parameter that has a string value, such as `name`, `description`, `namespacedId`, or `image`."
-                        - type: number
-                          description: |-
-                            A crafting grid slot may contain a number if either:
-                            a) You don't pass the `itemFields` parameter - in this case, the number represents an `itemId` of an item.
-                            b) You pass the `itemFields` parameter but only include one numerical field, such as `itemId` or `stackSize`.
-                        - type: object
-                          description: A crafting grid slot may contain an object representing an item  if you pass multiple fields for the `itemFields` parameter.
-                          properties:
-                            itemId:
-                              type: number
-                              description: "The numerical ID of this item. Useful for getting specific items with /items/{item}. Does not correspond with any in game numerical IDs."
-                            name:
-                              type: string
-                              description: The name of the item.
-                            namespacedId:
-                              type: string
-                              description: "The namespaced ID of this item, which is used to identify the item in game when using commands."
-                            description:
-                              type: string
-                              description: A short description of the item and its uses. Certain items that fall under a common category share a single description.
-                            image:
-                              type: string
-                              description: "A link to a 16x16 image of the item, which is usually displayed inside the player's inventory."
-                            stackSize:
-                              type: number
-                              description: "The maximum number of this item which can fit in a single stack of the player's inventory. Can be 1, 16, or 64."
-                        - type: array
-                          description: "In certain recipes, you can use substitute different ingredients in a slot while still crafting the same item. For example, to craft a Note Block, you can use any wood plank type in each slot around the Redstone Dust, and you will still get a Note Block. In cases such as these, an array is used in place of an item object/item field in one of the crafting grid slots. The array represents all of the possible ingredients which can be substituted for each other in that slot. The format of the items in the array is the exact same as the format of the items in the recipe array - they can be null, a string, a number, or an item object."
-                          items:
-                            oneOf:
-                              - type: "null"
-                                description: A `null` value represents no item in that slot of the crafting grid.
-                              - type: string
-                                description: "A crafting grid slot may contain a string if you pass a single field for the `itemFields` parameter that has a string value, such as `name`, `description`, `namespacedId`, or `image`."
-                              - type: number
-                                description: |-
-                                  A crafting grid slot may contain a number if either:
-                                  a) You don't pass the `itemFields` parameter - in this case, the number represents an `itemId` of an item.
-                                  b) You pass the `itemFields` parameter but only include one numerical field, such as `itemId` or `stackSize`.
-                              - type: object
-                                description: A crafting grid slot may contain an object representing an item  if you pass multiple fields for the `itemFields` parameter.
-                                properties:
-                                  itemId:
-                                    type: number
-                                    description: "The numerical ID of this item. Useful for getting specific items with /items/{item}. Does not correspond with any in game numerical IDs."
-                                  name:
-                                    type: string
-                                    description: The name of the item.
-                                  namespacedId:
-                                    type: string
-                                    description: "The namespaced ID of this item, which is used to identify the item in game when using commands."
-                                  description:
-                                    type: string
-                                    description: A short description of the item and its uses. Certain items that fall under a common category share a single description.
-                                  image:
-                                    type: string
-                                    description: "A link to a 16x16 image of the item, which is usually displayed inside the player's inventory."
-                                  stackSize:
-                                    type: number
-                                    description: "The maximum number of this item which can fit in a single stack of the player's inventory. Can be 1, 16, or 64."
-              examples:
-                Example 1 - no query parameters:
-                  value:
-                    craftingRecipeId: 26
-                    itemId: 32
-                    quantity: 8
-                    shapeless: false
-                    recipe:
-                      - 25
-                      - 25
-                      - 25
-                      - 25
-                      - 527
-                      - 25
-                      - 25
-                      - 25
-                      - 25
-                'Example 2 - itemFields = "name"':
-                  value:
-                    craftingRecipeId: 13
-                    quantity: 6
-                    shapeless: false
-                    item: Activator Rail
-                    recipe:
-                      - Iron Ingot
-                      - Stick
-                      - Iron Ingot
-                      - Iron Ingot
-                      - Redstone Torch
-                      - Iron Ingot
-                      - Iron Ingot
-                      - Stick
-                      - Iron Ingot
-                'Example 3 - fields = ["itemId", "recipe"], itemFields = ["name", "image"]':
-                  value:
-                    item:
-                      name: Gray Bed
-                      image: "https://minecraft-api.s3.amazonaws.com/items/gray_bed.png"
-                    recipe:
-                      - null
-                      - null
-                      - null
-                      - name: Gray Wool
-                        image: "https://minecraft-api.s3.amazonaws.com/items/gray_wool.png"
-                      - name: Gray Wool
-                        image: "https://minecraft-api.s3.amazonaws.com/items/gray_wool.png"
-                      - name: Gray Wool
-                        image: "https://minecraft-api.s3.amazonaws.com/items/gray_wool.png"
-                      - - name: Oak Planks
-                          image: "https://minecraft-api.s3.amazonaws.com/items/oak_planks.png"
-                        - name: Spruce Planks
-                          image: "https://minecraft-api.s3.amazonaws.com/items/spruce_planks.png"
-                        - name: Birch Planks
-                          image: "https://minecraft-api.s3.amazonaws.com/items/birch_planks.png"
-                        - name: Jungle Planks
-                          image: "https://minecraft-api.s3.amazonaws.com/items/jungle_planks.png"
-                        - name: Acacia Planks
-                          image: "https://minecraft-api.s3.amazonaws.com/items/acacia_planks.png"
-                        - name: Dark Oak Planks
-                          image: "https://minecraft-api.s3.amazonaws.com/items/dark_oak_planks.png"
-                      - - name: Oak Planks
-                          image: "https://minecraft-api.s3.amazonaws.com/items/oak_planks.png"
-                        - name: Spruce Planks
-                          image: "https://minecraft-api.s3.amazonaws.com/items/spruce_planks.png"
-                        - name: Birch Planks
-                          image: "https://minecraft-api.s3.amazonaws.com/items/birch_planks.png"
-                        - name: Jungle Planks
-                          image: "https://minecraft-api.s3.amazonaws.com/items/jungle_planks.png"
-                        - name: Acacia Planks
-                          image: "https://minecraft-api.s3.amazonaws.com/items/acacia_planks.png"
-                        - name: Dark Oak Planks
-                          image: "https://minecraft-api.s3.amazonaws.com/items/dark_oak_planks.png"
-                      - - name: Oak Planks
-                          image: "https://minecraft-api.s3.amazonaws.com/items/oak_planks.png"
-                        - name: Spruce Planks
-                          image: "https://minecraft-api.s3.amazonaws.com/items/spruce_planks.png"
-                        - name: Birch Planks
-                          image: "https://minecraft-api.s3.amazonaws.com/items/birch_planks.png"
-                        - name: Jungle Planks
-                          image: "https://minecraft-api.s3.amazonaws.com/items/jungle_planks.png"
-                        - name: Acacia Planks
-                          image: "https://minecraft-api.s3.amazonaws.com/items/acacia_planks.png"
-                        - name: Dark Oak Planks
-                          image: "https://minecraft-api.s3.amazonaws.com/items/dark_oak_planks.png"
-        "404":
-          description: Not Found - sent when no crafting recipe was found with the `craftingRecipeId` in the URL.
-        "500":
-          description: "Internal Server Error - usually sent when you pass invalid fields for the `fields` or `itemFields` parameters, but it could also indicate a different server error as well."
-      operationId: get-crafting-recipes-craftingRecipeId
-      description: Get a specific crafting recipe based on its `craftingRecipeId`.
-      parameters:
-        - schema:
-            default: "*"
-            example:
-              - name
-              - image
-              - stackSize
-            uniqueItems: false
-          in: query
-          name: fields
-          description: "The fields of the crafting recipe object to include in the response. Passing an array of strings results in all of those fields being included, while passing only a string results in only that single field being included. If you don't pass any value for this parameter, then all fields are included."
-        - schema: {}
-          in: query
-          name: itemFields
-          description: "If this parameter is passed, then instead of returning `itemId`s in the `itemId` and `recipe` fields, the recipes will have an `item` field with the fields defined in `itemFields`, and the `itemId`s in the `recipe` field will also be replaced by item objects ith the fields defined in `itemFields`. This is essentially equivalent to querying `/items/{item}` for every item found throughout the recipe object. Furthermore, if only one field is included in `itemFields`, then instead of including an item object, just the value of that field will be used in place of the `itemId`s. The valid formats of this field are the same as the valid formats of the `fields` parameter of the `/items/{item}` endpoint."
-      requestBody: {}
+          description: "Filters the crafting recipes by only including recipes that uses a certain item as an ingredient."
 components:
   schemas: {}

@@ -22,7 +22,10 @@ import { sortByKey } from "../utils";
       .forEach((button: HTMLElement) => button.click())
   );
   await page.waitForFunction(
-    () => document.querySelectorAll("table[data-description='Crafting recipes']").length === 10
+    () => document.querySelectorAll("table[data-description='Crafting recipes']").length === 10,
+    {
+      timeout: 50000,
+    }
   );
   console.log("Crafting recipes loaded");
   let recipes = await page.evaluate((): CraftingRecipe[] => {

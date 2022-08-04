@@ -23,8 +23,19 @@ export default arrayEndpoint({
     "luminance",
     "blastResistance",
   ],
-  filterableFields: ["item", "tool", "flammable", "transparent", "luminance", "blastResistance"],
+  filterableFields: [
+    "name",
+    "namespacedId",
+    "item",
+    "tool",
+    "flammable",
+    "transparent",
+    "luminance",
+    "blastResistance",
+  ],
   restOfSchema: {
+    name: z.string(),
+    namespacedId: z.string(),
     item: z.string(),
     tool: z.enum(["Axe", "Pickaxe", "Sword", "Shovel", "Hoe", "Shears", null]),
     flammable: booleanSchema,
@@ -38,7 +49,6 @@ export default arrayEndpoint({
     color: z.string().regex(/^#[0-9a-f]{6}$/i),
     colorVariance: preprocessNumber(z.number().min(0).max(255)).default(20),
     colorAmount: preprocessNumber(z.number().min(0).max(1)).default(0.1),
-    // TODO: min/max fields and color fields
   },
   handler(blocks: Partial<Block>[], query) {
     let filteredBlocks = blocks;
