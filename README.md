@@ -12,8 +12,6 @@ You can find detailed documentation for the API [here](https://anish-shanbhag.st
 
 The root endpoint of the API is https://minecraft-api.vercel.app/api.
 
-You can find detailed information about all of the current endpoints by expanding the **Endpoints** dropdown on the left.
-
 To form requests to the API, append the path of the resource you want to the end of the root endpoint. As an example, a simple request to get information about all of the items in Minecraft would be https://minecraft-api.vercel.app/api/items. This request would return the following JSON:
 
 ```json
