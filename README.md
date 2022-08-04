@@ -6,39 +6,41 @@ The aim of this API is to provide you with access to all sorts of information ab
 
 # Documentation
 
-You can find detailed documentation for the API [here](https://stoplight.io/p/docs/gh/anish-shanbhag/minecraft-api).
+You can find detailed documentation for the API [here](https://anish-shanbhag.stoplight.io/docs/minecraft-api).
 
 # Endpoints
 
-Currently, the root endpoint of the API is https://i8xla88513.execute-api.us-east-1.amazonaws.com/latest. A custom domain name (that would be much easier to remember than this one!) may come soon.
+The root endpoint of the API is https://minecraft-api.vercel.app/api.
 
-To form requests to the API, append the path of the resource you want to the end of the root endpoint. As an example, a simple request to get information about all of the items in Minecraft would be https://i8xla88513.execute-api.us-east-1.amazonaws.com/latest/items. This request would return the following JSON:
+You can find detailed information about all of the current endpoints by expanding the **Endpoints** dropdown on the left.
+
+To form requests to the API, append the path of the resource you want to the end of the root endpoint. As an example, a simple request to get information about all of the items in Minecraft would be https://minecraft-api.vercel.app/api/items. This request would return the following JSON:
 
 ```json
 [
   {
-    "itemId": 1,
     "name": "Acacia Boat",
     "namespacedId": "acacia_boat",
     "description": "A boat is both an item and a vehicle entity.",
-    "image": "https://minecraft-api.s3.amazonaws.com/items/acacia_boat.png",
-    "stackSize": 1
+    "image": "https://minecraft-api.vercel.app/images/items/acacia_boat.png",
+    "stackSize": 1,
+    "renewable": true
   },
   {
-    "itemId": 2,
     "name": "Acacia Button",
     "namespacedId": "acacia_button",
     "description": "A button is a non-solid block that can provide temporary redstone power.",
-    "image": "https://minecraft-api.s3.amazonaws.com/items/acacia_button.png",
-    "stackSize": 64
+    "image": "https://minecraft-api.vercel.app/images/items/acacia_button.png",
+    "stackSize": 64,
+    "renewable": true
   },
   {
-    "itemId": 3,
     "name": "Acacia Door",
     "namespacedId": "acacia_door",
     "description": "A door is a block that can be used as a barrier that can be opened by hand or with redstone.",
-    "image": "https://minecraft-api.s3.amazonaws.com/items/acacia_door.png",
-    "stackSize": 64
+    "image": "https://minecraft-api.vercel.app/images/items/acacia_door.png",
+    "stackSize": 64,
+    "renewable": true
   },
   ...
 ]
@@ -46,4 +48,4 @@ To form requests to the API, append the path of the resource you want to the end
 
 # A Note About Development
 
-This project is currently a work in progress, and so there may be errors in the documentation or bugs in the API. If you find one, you can help me out by creating an issue in the [GitHub repository](https://github.com/anish-shanbhag/minecraft-api). Additionally, in order to save resources, the database which the API queries for data shuts down after a few minutes of inactivity. This means that requests to the API will time out if nobody has been using it for a while, and so you may need to resend the request after around a minute in order to get a response.
+This project is currently a work in progress, and so there may be errors in the documentation or bugs in the API. If you find one, you can help me out by creating an issue in the [GitHub repository](https://github.com/anish-shanbhag/minecraft-api).
