@@ -12,7 +12,7 @@ import { sortByKey } from "../utils";
   });
   const page = await browser.newPage();
   console.log("Opening crafting page...");
-  await page.goto("https://minecraft.fandom.com/wiki/Crafting", {
+  await page.goto("https://minecraft.wiki/w/Crafting", {
     waitUntil: "domcontentloaded",
   });
   console.log("Crafting page loaded");
