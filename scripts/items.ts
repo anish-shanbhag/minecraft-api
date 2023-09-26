@@ -25,7 +25,7 @@ const writeItems = (items: Item[]) => {
   });
   const dataPage = await browser.newPage();
   console.log("Opening data page...");
-  dataPage.goto("https://minecraft.fandom.com/wiki/Java_Edition_data_values", {
+  dataPage.goto("https://minecraft.wiki/w/Java_Edition_data_values", {
     timeout: 0,
   });
   await dataPage.waitForSelector("div[data-page='Java Edition data values/Items'] .jslink");
@@ -88,7 +88,7 @@ const writeItems = (items: Item[]) => {
           );
           const url: string =
             name === "Tropical Fish"
-              ? "https://minecraft.fandom.com/wiki/Tropical_Fish_(item)"
+              ? "https://minecraft.wiki/w/Tropical_Fish_(item)"
               : await (await (await row.$("a[title]")).getProperty("href")).jsonValue();
           const itemPage = await browser.newPage();
           await itemPage.goto(url, { timeout: 0 });
@@ -329,7 +329,7 @@ const writeItems = (items: Item[]) => {
   await Promise.all(
     pages.map(async ({ page, namespacedId, stackSize, renewable, filter }) => {
       const itemPage = await browser.newPage();
-      await itemPage.goto("https://minecraft.fandom.com/wiki/" + page);
+      await itemPage.goto("https://minecraft.wiki/w/" + page);
       await itemPage.waitForSelector(".invslot-item");
       const newItems = (
         await itemPage.evaluate(() => {

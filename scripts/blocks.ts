@@ -615,7 +615,7 @@ const getItemNameForBlock = (name: string) => {
           if (missingAttribute("tool")) return;
 
           // disabled requiresTool and requiresSilkTouch since the information has been moved to
-          // https://minecraft.fandom.com/wiki/Breaking and https://minecraft.fandom.com/wiki/Silk_Touch
+          // https://minecraft.wiki/w/Breaking and https://minecraft.wiki/w/Silk_Touch
           // TODO: add hardness instead of requiresTool?
 
           try {
