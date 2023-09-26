@@ -67,14 +67,14 @@ const getItemNameForBlock = (name: string) => {
   });
   const dataPage = await browser.newPage();
   console.log("Opening data page...");
-  await dataPage.goto("https://minecraft.gamepedia.com/Java_Edition_data_values");
+  await dataPage.goto("https://minecraft.wiki/w/Java_Edition_data_values");
   console.log("Data page loaded");
   await dataPage.waitForSelector("div[data-page='Java Edition data values/Blocks'] .jslink");
   await dataPage.click("div[data-page='Java Edition data values/Blocks'] .jslink");
   await dataPage.waitForSelector("a[title='Acacia Button']");
   console.log("Blocks table loaded");
   const explosionPage = await browser.newPage();
-  await explosionPage.goto("https://minecraft.gamepedia.com/Explosion", {
+  await explosionPage.goto("https://minecraft.wiki/w/Explosion", {
     waitUntil: "domcontentloaded",
   });
   console.log("Explosion page loaded");
@@ -117,7 +117,7 @@ const getItemNameForBlock = (name: string) => {
           }
           const url: string =
             name === "Beetroots"
-              ? "https://minecraft.gamepedia.com/Beetroot_Seeds"
+              ? "https://minecraft.wiki/w/Beetroot_Seeds"
               : await (await a.getProperty("href")).jsonValue();
           blockPage = await browser.newPage();
           await blockPage.goto(url, {
